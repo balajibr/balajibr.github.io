@@ -14,10 +14,9 @@
 
 ## [Professional Experience](https://www.linkedin.com/in/balajibr/)
 ### AI/ML Architect | Onix (2023 - Present)
-* **Embedded with strategic accounts** to lead GenAI deployments, transitioning rapid prototypes into production-ready agentic workflows using **Vertex AI’s Gemini Enterprise platform**.
+* **Building rapid prototypes** to transition into production-ready agentic workflows using **Gemini Enterprise Agent Platform**.
 * Developing industry-specific **Vision Language Models (VLM)** for legacy system computer interaction and optimizing domain-specific **Small Language Models (SLMs)**.
 * Architecting complex agentic workflows using **ADK**, **LangGraph** and proprietary agentic frameworks using **Apache Airflow** inspired DAGs to solve domain-specific complex business problems.
-* **Built reusable engineering accelerators** and modules that codify field patterns, reducing technical friction for multi-agent system adoption.
 
 ### Solutions Architect | Google (4+ years)
 * Implemented customized **Document AI processors** for lending document types and acted as a **critical feedback loop** for product engineering to refine the document intelligence roadmap.
