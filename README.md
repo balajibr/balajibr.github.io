@@ -35,8 +35,9 @@
 - [US Patent: Automated Cloud Migration Framework.](https://patents.google.com/patent/US12204505)
 
 ## [Certifications](https://www.credly.com/users/balaji.ramakrishnan/badges#credly)
-- GCP Professional ML Engineer. 
-- GCP Professional Data Engineer. 
-- GCP Professional Cloud Architect. 
+- Google Cloud Authorized Trainer.
+- Google Cloud Professional ML Engineer. 
+- Google Cloud Professional Data Engineer. 
+- Google Cloud Professional Cloud Architect. 
 
 ## [Contact](mailto:br.balaji+resume\(at\)gmail.com)
