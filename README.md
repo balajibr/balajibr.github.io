@@ -1,17 +1,16 @@
 ## Professional Profile
 * **Technologist** with over 25 years of experience in distributed systems and cloud architecture.
-* Currently dedicated to the research and development of **agentic AI systems** and the creation of industry-specific solutions using Generative AI.
-* **Builder-Engineer-Consultant** moving beyond high-level architecture to code, debug, and jointly ship bespoke agentic solutions directly within strategic customer environments.
+* Currently dedicated to the research and development of **agentic AI systems** and the creation of industry-specific solutions.
+* **Builder-Engineer-Consultant** moving beyond high-level architecture to code, debug, and ship bespoke agentic solutions.
 * **Proven track record** of delivering high-impact AI solutions at **Google and Microsoft**, including customized **Document AI processors** and large-scale cloud automation.
-* **Holder of 3 US Patents** in Generative AI and Cloud infrastructure, combining a researcher's technical depth with a solutions engineer's ability to drive strategic customer adoption.
+* **Holder of 3 US Patents** in Generative AI and Cloud infrastructure, combining a researcher's technical depth with a solutions engineer's ability.
 
 ## Core Expertise
-* **Agentic Orchestration (ADK & LangGraph):** Expert at building production-grade multi-agent systems and **MCP servers** (Model Context Protocol) using the **Google Agent Development Kit (ADK)** and graph-based frameworks to handle non-linear business logic.
+* **Agentic Orchestration (ADK & LangGraph):** Expert at building production-grade multi-agent systems using the **Google Agent Development Kit (ADK)** and graph-based frameworks.
 * **Enterprise-Scale RAG & Retrieval:** Designing resilient retrieval systems and **Knowledge Catalogs** that bridge the gap between static enterprise data and dynamic, autonomous LLM reasoning.
 * **Multi-Modal Solutions (VLM/SLM):** Researching and deploying **Vision Language Models (VLM)** to enable "computer use" capabilities for legacy UI automation and local fine-tuning of domain-specific **Small Language Models**.
-* **Distributed Systems & Infrastructure:** Deep technical roots in **GCP and Azure (L300)**, managing high-concurrency cloud environments and **Agent Sandboxes** for secure AI inference and deployment.
-* **Production-Grade AI Evals:** Implementing rigorous **human-in-the-loop (HITL)** testing and observability frameworks to ensure model output reliability, safety, and enterprise alignment.
-* **Strategic Pre-Sales & IP:** Leadership in complex RFPs and technical strategy, including the creation of **automated RFP intelligence bots** that significantly reduced turnaround times.
+* **Distributed Systems & Infrastructure:** Deep technical roots in **GCP and Azure**, managing high-concurrency cloud environments.
+* **Production-Grade AI Evals:** Implementing rigorous **human-in-the-loop (HITL)** testing and observability frameworks.
 
 ## [Professional Experience](https://www.linkedin.com/in/balajibr/)
 ### AI/ML Architect | Onix (2023 - Present)
