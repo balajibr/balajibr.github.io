@@ -42,4 +42,4 @@
 * **GCP Professional Cloud Architect**.
 
 ## [Contact](mailto:br.balaji+resume\(at\)gmail.com)
-**Email:** br.balaji+resume(at)gmail.com | **Website:** https://balajir.github.io.
+**Email:** br.balaji+resume(at)gmail.com | **Website:** https://balajibr.github.io.
