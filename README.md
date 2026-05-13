@@ -1,7 +1,7 @@
 ## Professional Profile
 * **Technologist** with over 25 years of experience in distributed systems and cloud architecture.
 * Currently dedicated to the research and development of **agentic AI systems** and the creation of industry-specific solutions using Generative AI.
-* **Embedded Builder-Consultant** moving beyond high-level architecture to code, debug, and jointly ship bespoke agentic solutions directly within strategic customer environments.
+* **Builder-Engineer-Consultant** moving beyond high-level architecture to code, debug, and jointly ship bespoke agentic solutions directly within strategic customer environments.
 * **Proven track record** of delivering high-impact AI solutions at **Google and Microsoft**, including customized **Document AI processors** and large-scale cloud automation.
 * **Holder of 3 US Patents** in Generative AI and Cloud infrastructure, combining a researcher's technical depth with a solutions engineer's ability to drive strategic customer adoption.
 
@@ -17,7 +17,7 @@
 ### AI/ML Architect | Onix (2023 - Present)
 * **Embedded with strategic accounts** to lead GenAI deployments, transitioning rapid prototypes into production-ready agentic workflows using **Vertex AI’s Gemini Enterprise platform**.
 * Developing industry-specific **Vision Language Models (VLM)** for legacy system computer interaction and optimizing domain-specific **Small Language Models (SLMs)**.
-* Architecting complex agentic workflows using **LangGraph** and custom SDKs to solve domain-specific business problems.
+* Architecting complex agentic workflows using **ADK**, **LangGraph** and proprietary agentic frameworks using **Apache Airflow** inspired DAGs to solve domain-specific complex business problems.
 * **Built reusable engineering accelerators** and modules that codify field patterns, reducing technical friction for multi-agent system adoption.
 
 ### Solutions Architect | Google (4+ years)
