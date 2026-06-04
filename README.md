@@ -39,5 +39,5 @@
 * **GCP Professional Data Engineer**.
 * **GCP Professional Cloud Architect**.
 
-## [Contact](mailto:br.balaji+resume\(at\)gmail.com)
-**Email:** br.balaji+resume(at)gmail.com | **Website:** https://balajibr.github.io.
+## Contact
+[**Email:** br.balaji+resume@gmail.com](mailto:br.balaji+resume@gmail.com) | [**Linkedin:** https://www.linkedin.com/in/balajibr/](https://www.linkedin.com/in/balajibr/) | [**Website:** https://balajibr.github.io](https://balajibr.github.io).
