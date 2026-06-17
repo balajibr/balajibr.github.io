@@ -1,4 +1,4 @@
-**📧** [br.balaji+resume@gmail.com](mailto:br.balaji+resume@gmail.com) / **🔗** [https://www.linkedin.com/in/balajibr](https://www.linkedin.com/in/balajibr) / **🤖** [https://balajibr.github.io](https://balajibr.github.io).
+**📧** [br.balaji+resume@gmail.com](mailto:br.balaji+resume@gmail.com)  **🌐** [https://www.linkedin.com/in/balajibr](https://www.linkedin.com/in/balajibr) 
 
 ## Professional Profile
 * **Technologist** with over 25 years of experience in distributed systems and cloud architecture.
