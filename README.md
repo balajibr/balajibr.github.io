@@ -40,6 +40,6 @@
 
 ## [Certifications](https://www.credly.com/users/balaji.ramakrishnan/badges#credly)
 * Google Cloud Authorized Trainer.
-* GCP Professional Machine Learning Engineer
+* GCP Professional Machine Learning Engineer.
 * GCP Professional Data Engineer.
 * GCP Professional Cloud Architect.
