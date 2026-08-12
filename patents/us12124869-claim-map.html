@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Claim Map — US 12,124,869 B1</title>
+<title>Claim Map, US 12,124,869 B1</title>
 <style>
   :root {
     --paper: #eef0e8;
@@ -312,7 +312,7 @@
 <div class="masthead">
   <div class="masthead-inner">
     <span class="mono">US 12,124,869 B1</span>
-    <span class="kind">CLAIM MAP — READING NOTES</span>
+    <span class="kind">CLAIM MAP · READING NOTES</span>
     <span class="mono">Granted October 22, 2024</span>
   </div>
 </div>
@@ -334,20 +334,20 @@
   </dl>
 
   <div class="verbatim">
-    <span class="label">Field of Invention — col. 1, verbatim</span>
+    <span class="label">Field of Invention, col. 1, verbatim</span>
     <p>&ldquo;Embodiments of the present disclosure relate to a field of data migration and more particularly to a system and a method to automate migration of one or more resources to a cloud.&rdquo;</p>
-    <span class="label" style="margin-top:10px;">Background — col. 1, paraphrased</span>
-    <p>Migration waves are today prepared manually from infrastructure inventories, application logs, database inventories, and compliance reports — a process the patent characterizes as slow, costly, and prone to data-security, accuracy, and compliance failures. The claimed invention automates that wave-planning-through-deployment sequence end to end.</p>
+    <span class="label" style="margin-top:10px;">Background, col. 1, paraphrased</span>
+    <p>Migration waves are today prepared manually from infrastructure inventories, application logs, database inventories, and compliance reports. The patent characterizes that process as slow, costly, and prone to data-security, accuracy, and compliance failures. The claimed invention automates that wave-planning-through-deployment sequence end to end.</p>
   </div>
 
   <div class="callout">
     <span class="label">Why this was filed</span>
-    At the time, there was no single tool that carried a migration from wave plan to running application in the cloud — teams stitched together a landing-zone provisioner, a storage tool, a network tool, a database-migration tool, a server lift-and-shift tool, and an application deployment tool by hand, with an engineer gluing each handoff to the next. Onix had already built a system that did all six stages itself, chaining the output of one stage into the trigger for the next, and set out to patent that specific chain rather than any one stage in isolation. The plans this system consumes as input are themselves the claimed output of a companion filing, <a href="us12204505-claim-map.html">US 12,204,505</a>, filed one week earlier by the same seven inventors.
+    At the time, there was no single tool that carried a migration from wave plan to running application in the cloud. Teams stitched together a landing-zone provisioner, a storage tool, a network tool, a database-migration tool, a server lift-and-shift tool, and an application deployment tool by hand, with an engineer gluing each handoff to the next. Onix had already built a system that did all six stages itself, chaining the output of one stage into the trigger for the next, and set out to patent that specific chain rather than any one stage in isolation. The plans this system consumes as input are themselves the claimed output of a companion filing, <a href="us12204505-claim-map.html">US 12,204,505</a>, filed one week earlier by the same seven inventors.
   </div>
 
   <h2 class="section"><span class="num">I.</span>Three Claims, One Invention</h2>
   <p class="prose">
-    The patent files the same automation pipeline three separate ways — as a system, as a method, and as a computer-readable medium. This is standard claim drafting: it lets an infringement theory reach whoever builds the system, whoever performs the steps, or whoever distributes the software, without needing three different inventions. All three independent claims recite the identical six-module chain; claims 19 and 20 are close mirrors of claim 1 restated in method and CRM form.
+    The patent files the same automation pipeline three separate ways: as a system, as a method, and as a computer-readable medium. This is standard claim drafting: it lets an infringement theory reach whoever builds the system, whoever performs the steps, or whoever distributes the software, without needing three different inventions. All three independent claims recite the identical six-module chain; claims 19 and 20 are close mirrors of claim 1 restated in method and CRM form.
   </p>
 
   <div class="table-wrap">
@@ -376,9 +376,9 @@
     </table>
   </div>
 
-  <h2 class="section"><span class="num">II.</span>The Automation Pipeline — Claim 1</h2>
+  <h2 class="section"><span class="num">II.</span>The Automation Pipeline: Claim 1</h2>
   <p class="prose">
-    Claim 1&rsquo;s six modules are claimed in a fixed sequence, each &ldquo;operatively coupled&rdquo; to the one before it. What matters legally is not just the module list but the trigger language binding three of the six couplings: storage migration <span class="ref">80</span> begins <em>upon</em> security details being applied by <span class="ref">70</span>; network configuration <span class="ref">90</span> begins <em>upon</em> storage being configured by <span class="ref">80</span>; data migration&rsquo;s dependency analysis begins <em>upon</em> secure communication being established by <span class="ref">90</span>. The other three couplings — data acquisition&nbsp;<span class="ref">60</span> to landing zone&nbsp;<span class="ref">70</span>, and data migration&nbsp;<span class="ref">100</span> through server&nbsp;<span class="ref">110</span> to application migration&nbsp;<span class="ref">120</span> — are claimed only as structural coupling, with no analogous &ldquo;upon&rdquo; clause.
+    Claim 1&rsquo;s six modules are claimed in a fixed sequence, each &ldquo;operatively coupled&rdquo; to the one before it. What matters legally is not just the module list but the trigger language binding three of the six couplings: storage migration <span class="ref">80</span> begins <em>upon</em> security details being applied by <span class="ref">70</span>; network configuration <span class="ref">90</span> begins <em>upon</em> storage being configured by <span class="ref">80</span>; data migration&rsquo;s dependency analysis begins <em>upon</em> secure communication being established by <span class="ref">90</span>. The other three couplings, data acquisition&nbsp;<span class="ref">60</span> to landing zone&nbsp;<span class="ref">70</span>, and data migration&nbsp;<span class="ref">100</span> through server&nbsp;<span class="ref">110</span> to application migration&nbsp;<span class="ref">120</span>, are claimed only as structural coupling, with no analogous &ldquo;upon&rdquo; clause.
   </p>
 
   <figure>
@@ -470,17 +470,17 @@
       </svg>
     </div>
     <figcaption>
-      <span class="fig-label">Fig. 1 —</span> Claim 1&rsquo;s module chain, redrawn with the patent&rsquo;s own reference numerals (system <span class="ref">10</span>, processing subsystem <span class="ref">20</span>, server <span class="ref">30</span>, network <span class="ref">40</span>, integrated database <span class="ref">50</span>, modules <span class="ref">60</span>–<span class="ref">120</span>).
+      <span class="fig-label">Fig. 1.</span> Claim 1&rsquo;s module chain, redrawn with the patent&rsquo;s own reference numerals (system <span class="ref">10</span>, processing subsystem <span class="ref">20</span>, server <span class="ref">30</span>, network <span class="ref">40</span>, integrated database <span class="ref">50</span>, modules <span class="ref">60</span>–<span class="ref">120</span>).
       <div class="legend">
-        <span><span class="swatch"></span> solid — explicit &ldquo;upon&hellip;&rdquo; trigger clause in claim&nbsp;1</span>
-        <span><span class="swatch dashed"></span> dashed — &ldquo;operatively coupled&rdquo; only, no stated trigger</span>
+        <span><span class="swatch"></span> solid: explicit &ldquo;upon&hellip;&rdquo; trigger clause in claim&nbsp;1</span>
+        <span><span class="swatch dashed"></span> dashed: &ldquo;operatively coupled&rdquo; only, no stated trigger</span>
       </div>
     </figcaption>
   </figure>
 
-  <h2 class="section"><span class="num">III.</span>Method 300 — The Same Chain as Seventeen Steps</h2>
+  <h2 class="section"><span class="num">III.</span>Method 300: The Same Chain as Seventeen Steps</h2>
   <p class="prose">
-    Claims 19 and 20 restate Fig. 1&rsquo;s six modules as method <span class="ref">300</span>, a sequence of seventeen numbered steps (<span class="ref">310</span>–<span class="ref">470</span>) spread across the specification&rsquo;s Figs. 4a–4c. Collapsed onto one timeline, each module owns a short run of consecutive step numbers — one for data acquisition, three each for landing zone creation, data migration, server migration, and application migration, two each for storage and network configuration. Step <span class="ref">470</span>, deploying the applications, is the step the claim itself calls out as the point &ldquo;thereby automating the migration.&rdquo;
+    Claims 19 and 20 restate Fig. 1&rsquo;s six modules as method <span class="ref">300</span>, a sequence of seventeen numbered steps (<span class="ref">310</span>–<span class="ref">470</span>) spread across the specification&rsquo;s Figs. 4a–4c. Collapsed onto one timeline, each module owns a short run of consecutive step numbers: one for data acquisition, three each for landing zone creation, data migration, server migration, and application migration, two each for storage and network configuration. Step <span class="ref">470</span>, deploying the applications, is the step the claim itself calls out as the point &ldquo;thereby automating the migration.&rdquo;
   </p>
 
   <figure>
@@ -561,13 +561,13 @@
       </svg>
     </div>
     <figcaption>
-      <span class="fig-label">Fig. 2 —</span> Method <span class="ref">300</span>&rsquo;s seventeen steps, grouped by the module that performs each one. Step <span class="ref">470</span> (highlighted) is the closing limitation shared verbatim by claims 1, 19, and 20.
+      <span class="fig-label">Fig. 2.</span> Method <span class="ref">300</span>&rsquo;s seventeen steps, grouped by the module that performs each one. Step <span class="ref">470</span> (highlighted) is the closing limitation shared verbatim by claims 1, 19, and 20.
     </figcaption>
   </figure>
 
-  <h2 class="section"><span class="num">IV.</span>Dependent Claims — Scope Narrowing</h2>
+  <h2 class="section"><span class="num">IV.</span>Dependent Claims: Scope Narrowing</h2>
   <p class="prose">
-    Claims 2 through 18 all depend on claim 1 and narrow it along independent axes — cloud deployment model, resource type, requirement categories, networking primitives, and, notably, the database technology behind the &ldquo;integrated database <span class="ref">50</span>.&rdquo; That last group is deliberate: claiming SQL, NoSQL, <em>and</em> sequential/columnar variants keeps the claim from being read narrowly around one storage technology.
+    Claims 2 through 18 all depend on claim 1 and narrow it along independent axes: cloud deployment model, resource type, requirement categories, networking primitives, and, notably, the database technology behind the &ldquo;integrated database <span class="ref">50</span>.&rdquo; That last group is deliberate: claiming SQL, NoSQL, <em>and</em> sequential/columnar variants keeps the claim from being read narrowly around one storage technology.
   </p>
 
   <div class="table-wrap">
@@ -594,7 +594,7 @@
 
   <div class="callout">
     <span class="label">Note on scope</span>
-    Claims 10–18 read as breadth insurance rather than technical distinctions — they don&rsquo;t change what the system does, only where it runs and what it&rsquo;s backed by. Their value is defensive: a design-around that swaps SQL for NoSQL, or a local server for a cloud-hosted one, still falls inside claims 16–18 or 10–11 respectively, so it doesn&rsquo;t avoid the patent by that move alone.
+    Claims 10–18 read as breadth insurance rather than technical distinctions. They don&rsquo;t change what the system does, only where it runs and what it&rsquo;s backed by. Their value is defensive: a design-around that swaps SQL for NoSQL, or a local server for a cloud-hosted one, still falls inside claims 16–18 or 10–11 respectively, so it doesn&rsquo;t avoid the patent by that move alone.
   </div>
 
   <p class="navback"><a href="../">← back to index</a> · <a href="us12204505-claim-map.html">companion patent: US 12,204,505</a></p>

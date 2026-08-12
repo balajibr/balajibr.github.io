@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Claim Map — US 12,204,505 B1</title>
+<title>Claim Map, US 12,204,505 B1</title>
 <style>
   :root {
     --paper: #eef0e8;
@@ -283,7 +283,7 @@
 <div class="masthead">
   <div class="masthead-inner">
     <span class="mono">US 12,204,505 B1</span>
-    <span class="kind">CLAIM MAP — READING NOTES</span>
+    <span class="kind">CLAIM MAP · READING NOTES</span>
     <span class="mono">Granted January 21, 2025</span>
   </div>
 </div>
@@ -302,17 +302,17 @@
     <div class="biblio-row"><dt>Granted</dt><dd class="mono">January 21, 2025</dd></div>
     <div class="biblio-row"><dt>Assignee</dt><dd>Onix Networking Corp.</dd></div>
     <div class="biblio-row"><dt>Inventors</dt><dd>Sanjay Singh · Patrick Schablitzki · Ramnish Singh · Jay Jambotkar · Anantha Balasubramanian · <span class="me">Balaji Ramakrishnan</span> · Rajesh Kannan</dd></div>
-    <div class="biblio-row"><dt>Claims</dt><dd>18 total — 3 independent (<span class="ref">1</span> system, <span class="ref">9</span> method, <span class="ref">18</span> CRM)</dd></div>
+    <div class="biblio-row"><dt>Claims</dt><dd>18 total, 3 independent (<span class="ref">1</span> system, <span class="ref">9</span> method, <span class="ref">18</span> CRM)</dd></div>
   </dl>
 
   <div class="callout">
     <span class="label">Why this was filed</span>
-    Planning a migration was the part nobody had automated. Assessment tools could inventory an estate and map dependencies, but the actual judgment — which applications move together in which wave, when each one cuts over, which databases have to travel with which apps — came out of spreadsheets and architects&rsquo; heads. Onix had built a system where an AI model produced that plan from the raw inventory and then <em>validated</em> the wave grouping it proposed, carried it through to a generated landing zone, and kept tuning the environment after the move. This patent claims that planning-to-post-migration loop; its companion, <a href="us12124869-claim-map.html">US 12,124,869</a>, claims the execution chain that consumes the plan.
+    Planning a migration was the part nobody had automated. Assessment tools could inventory an estate and map dependencies, but the actual judgment, which applications move together in which wave, when each one cuts over, which databases have to travel with which apps, came out of spreadsheets and architects&rsquo; heads. Onix had built a system where an AI model produced that plan from the raw inventory and then <em>validated</em> the wave grouping it proposed, carried it through to a generated landing zone, and kept tuning the environment after the move. This patent claims that planning-to-post-migration loop; its companion, <a href="us12124869-claim-map.html">US 12,124,869</a>, claims the execution chain that consumes the plan.
   </div>
 
   <h2 class="section"><span class="num">I.</span>Five Modules, One Loop</h2>
   <p class="prose">
-    Claim 1 recites five modules in a chain, each &ldquo;operatively connected&rdquo; to the one before it. The chain is not purely linear in effect: the fourth module, the post-migration phase module <span class="ref">118</span>, runs a <em>continuous improvement loop</em> that analyzes each completed phase and feeds corrective actions back into subsequent waves. That loop is what separates this from a one-shot planning tool — the claim requires fine-tuning the loop for later waves, not just reporting on the first one. The fifth module is a chatbot <span class="ref">122</span>, claimed as part of the same system rather than as a separate support product.
+    Claim 1 recites five modules in a chain, each &ldquo;operatively connected&rdquo; to the one before it. The chain is not purely linear in effect: the fourth module, the post-migration phase module <span class="ref">118</span>, runs a <em>continuous improvement loop</em> that analyzes each completed phase and feeds corrective actions back into subsequent waves. That loop is what separates this from a one-shot planning tool. The claim requires fine-tuning the loop for later waves, not just reporting on the first one. The fifth module is a chatbot <span class="ref">122</span>, claimed as part of the same system rather than as a separate support product.
   </p>
 
   <figure>
@@ -406,23 +406,23 @@
 
         <!-- feedback loop from 118 back to 116 -->
         <path d="M 822 160 L 822 240 L 636 240 L 636 161" fill="none" stroke="#8f6a2e" stroke-width="1.6" stroke-dasharray="5 3" marker-end="url(#arB)"></path>
-        <text x="729" y="256" text-anchor="middle" font-size="10" fill="#8f6a2e" font-style="italic">continuous improvement loop — fine-tuned for subsequent migration waves</text>
+        <text x="729" y="256" text-anchor="middle" font-size="10" fill="#8f6a2e" font-style="italic">continuous improvement loop, fine-tuned for subsequent migration waves</text>
 
         <!-- right-sizing note -->
         <text x="822" y="290" text-anchor="middle" font-size="9.5" fill="#4a5266" font-style="italic">right-sizing instances · optimizing storage · adjusting configurations</text>
       </svg>
     </div>
     <figcaption>
-      <span class="fig-label">Fig. 1 —</span> Claim 1&rsquo;s five-module chain with the patent&rsquo;s own reference numerals. The brass path is the feedback loop: module <span class="ref">118</span> analyzes each finished phase and fine-tunes the loop for later waves, which is what makes the system iterative rather than a single planning pass.
+      <span class="fig-label">Fig. 1.</span> Claim 1&rsquo;s five-module chain with the patent&rsquo;s own reference numerals. The brass path is the feedback loop: module <span class="ref">118</span> analyzes each finished phase and fine-tunes the loop for later waves, which is what makes the system iterative rather than a single planning pass.
     </figcaption>
   </figure>
 
   <div class="callout">
     <span class="label">Numbering note</span>
-    The specification numbers the chatbot module inconsistently — col. 10 introduces it as &ldquo;a chatbot module <span class="mono">120</span>&rdquo; in the same sentence where <span class="mono">120</span> is the artificial intelligence model, while col. 11 and the claims consistently use <span class="mono">122</span>. This map follows the col. 11 usage: AI model <span class="ref">120</span>, chatbot module <span class="ref">122</span>.
+    The specification numbers the chatbot module inconsistently. Col. 10 introduces it as &ldquo;a chatbot module <span class="mono">120</span>&rdquo; in the same sentence where <span class="mono">120</span> is the artificial intelligence model, while col. 11 and the claims consistently use <span class="mono">122</span>. This map follows the col. 11 usage: AI model <span class="ref">120</span>, chatbot module <span class="ref">122</span>.
   </div>
 
-  <h2 class="section"><span class="num">II.</span>Method 400 — Eight Steps</h2>
+  <h2 class="section"><span class="num">II.</span>Method 400: Eight Steps</h2>
   <p class="prose">
     Claims 9 and 18 restate the system as method <span class="ref">400</span>, eight steps numbered <span class="ref">402</span>–<span class="ref">416</span>. The distribution is lopsided on purpose: three of the eight steps (<span class="ref">410</span>, <span class="ref">412</span>, <span class="ref">414</span>) belong to the post-migration phase module, which is where the claimed value sits. Only one step covers the landing-zone generation that most migration tooling treats as the main event.
   </p>
@@ -473,11 +473,11 @@
       </svg>
     </div>
     <figcaption>
-      <span class="fig-label">Fig. 2 —</span> Method <span class="ref">400</span>&rsquo;s eight steps by performing module. The three brass steps belong to the post-migration phase module <span class="ref">118</span>.
+      <span class="fig-label">Fig. 2.</span> Method <span class="ref">400</span>&rsquo;s eight steps by performing module. The three brass steps belong to the post-migration phase module <span class="ref">118</span>.
     </figcaption>
   </figure>
 
-  <h2 class="section"><span class="num">III.</span>Companion Filing — Plans Out, Plans In</h2>
+  <h2 class="section"><span class="num">III.</span>Companion Filing: Plans Out, Plans In</h2>
   <p class="prose">
     This patent and <a href="us12124869-claim-map.html">US 12,124,869</a> were filed one week apart by an identical set of seven inventors, and they interlock. The recommendation module <span class="ref">114</span> here produces a migration wave plan, a cutover plan per application, a database migration plan, security and compliance policy details, and a data migration plan. Those are, almost item for item, exactly what the other patent&rsquo;s data acquisition module <span class="ref">60</span> is claimed to <em>acquire</em> as its input. Read together, one patent claims deciding what the migration should be; the other claims carrying it out.
   </p>
@@ -531,7 +531,7 @@
       </svg>
     </div>
     <figcaption>
-      <span class="fig-label">Fig. 3 —</span> The two migration patents as a matched pair. The planning artifacts claimed as <em>outputs</em> of module <span class="ref">114</span> are the same artifacts claimed as <em>inputs</em> to module <span class="ref">60</span> of the companion patent.
+      <span class="fig-label">Fig. 3.</span> The two migration patents as a matched pair. The planning artifacts claimed as <em>outputs</em> of module <span class="ref">114</span> are the same artifacts claimed as <em>inputs</em> to module <span class="ref">60</span> of the companion patent.
     </figcaption>
   </figure>
 
@@ -565,7 +565,7 @@
 
   <div class="table-wrap">
     <table>
-      <caption>Dependent claims — 2–8 narrow the system, 10–17 narrow the method</caption>
+      <caption>Dependent claims: 2–8 narrow the system, 10–17 narrow the method</caption>
       <thead>
         <tr><th class="claimno">Claims</th><th>Narrows</th><th>Recites</th></tr>
       </thead>
@@ -573,12 +573,12 @@
         <tr><td class="claimno"><span class="ref">2</span></td><td>Recommendation inputs</td><td>dependency mapping, database dependency mapping, application business-hours calculation, target server sizing with forecasting, security/compliance mapping, target server optimization, backup policies, redundancy</td></tr>
         <tr><td class="claimno"><span class="ref">3</span></td><td>Wave classification</td><td>classifying applications into migration waves using artificial intelligence</td></tr>
         <tr><td class="claimno"><span class="ref">4</span></td><td>Migration types generated</td><td>storage migration, network migration, server migration, application migration</td></tr>
-        <tr><td class="claimno"><span class="ref">5</span></td><td>Post-migration documents</td><td>reports on migration process, timelines, resource configurations, performance metrics — generated using AI</td></tr>
+        <tr><td class="claimno"><span class="ref">5</span></td><td>Post-migration documents</td><td>reports on migration process, timelines, resource configurations, performance metrics, generated using AI</td></tr>
         <tr><td class="claimno"><span class="ref">6</span></td><td>Error handling</td><td>analyzing errors during migration and providing automated remediation plans</td></tr>
         <tr><td class="claimno"><span class="ref">7</span></td><td>Chatbot scope</td><td>answering user questions, providing documentation, assisting during the migration</td></tr>
-        <tr><td class="claimno"><span class="ref">8</span></td><td>Inventory data</td><td>applications, servers, virtual machines and assets — the foundation for scoping the migration</td></tr>
+        <tr><td class="claimno"><span class="ref">8</span></td><td>Inventory data</td><td>applications, servers, virtual machines and assets, the foundation for scoping the migration</td></tr>
         <tr><td class="claimno"><span class="ref">10</span></td><td>Analysis technique</td><td>machine learning algorithms over the received data and database dependencies</td></tr>
-        <tr><td class="claimno"><span class="ref">11</span></td><td>Log generation</td><td>logs from server, applications, network devices — usage patterns, performance metrics, error records</td></tr>
+        <tr><td class="claimno"><span class="ref">11</span></td><td>Log generation</td><td>logs from server, applications, network devices, covering usage patterns, performance metrics, error records</td></tr>
         <tr><td class="claimno"><span class="ref">12</span>–<span class="ref">13</span></td><td>Database coupling</td><td>recognizing the role databases play; identifying dependency in both directions between applications and specific databases</td></tr>
         <tr><td class="claimno"><span class="ref">14</span></td><td>Model training</td><td>training and tuning the ML model with insights from past migrations and domain-specific knowledge</td></tr>
         <tr><td class="claimno"><span class="ref">15</span></td><td>Sequencing</td><td>prioritizing applications by criticality; plan outlines precise sequence and timing</td></tr>
@@ -590,7 +590,7 @@
 
   <h2 class="section"><span class="num">V.</span>How This Differs From Existing Tools</h2>
   <p class="prose">
-    The migration tooling market is crowded, but it is crowded in segments. Discovery and assessment products inventory the estate and map dependencies; portfolio-analysis products score applications for refactoring; landing-zone products provision infrastructure from templates; optimization products right-size instances after the fact. The gap this patent addresses is that no single product ran the whole line — and specifically, none of them produced the migration wave plan itself. That artifact was a human deliverable, assembled from the assessment tools&rsquo; exports.
+    The migration tooling market is crowded, but it is crowded in segments. Discovery and assessment products inventory the estate and map dependencies; portfolio-analysis products score applications for refactoring; landing-zone products provision infrastructure from templates; optimization products right-size instances after the fact. The gap this patent addresses is that no single product ran the whole line. Specifically, none of them produced the migration wave plan itself. That artifact was a human deliverable, assembled from the assessment tools&rsquo; exports.
   </p>
 
   <div class="table-wrap">
@@ -601,27 +601,27 @@
       </thead>
       <tbody>
         <tr>
-          <td>Discovery &amp; assessment — Azure Migrate, AWS Migration Hub with Application Discovery Service, Google Cloud Migration Center (StratoZone)</td>
+          <td>Discovery &amp; assessment. Azure Migrate, AWS Migration Hub with Application Discovery Service, Google Cloud Migration Center (StratoZone)</td>
           <td>Inventories servers and applications, maps dependencies, right-sizes targets, estimates cost</td>
           <td>Output is an assessment, not a plan. Grouping applications into waves and sequencing cutovers stays with the architect</td>
         </tr>
         <tr>
-          <td>Portfolio analysis — CAST Highlight, vFunction</td>
+          <td>Portfolio analysis. CAST Highlight, vFunction</td>
           <td>Scores applications for cloud readiness and refactoring effort</td>
           <td>Advises on disposition per application; does not emit a cutover plan, database migration plan, or landing zone</td>
         </tr>
         <tr>
-          <td>Landing zone provisioning — Terraform modules, cloud foundation blueprints</td>
+          <td>Landing zone provisioning. Terraform modules, cloud foundation blueprints</td>
           <td>Provisions the target environment from templates</td>
             <td>Templates are authored up front; here the landing zone is generated <em>from</em> the wave plan the system itself produced</td>
         </tr>
         <tr>
-          <td>Post-migration optimization — IBM Turbonomic, CloudBolt, native cost tools</td>
+          <td>Post-migration optimization. IBM Turbonomic, CloudBolt, native cost tools</td>
           <td>Right-sizes instances and flags waste after workloads land</td>
           <td>Operates as a separate product on a separate timeline; claim 1 binds the loop back into the next migration wave</td>
         </tr>
         <tr>
-          <td>Program tracking — ServiceNow, Planview, spreadsheets</td>
+          <td>Program tracking. ServiceNow, Planview, spreadsheets</td>
           <td>Tracks the wave schedule as project management</td>
           <td>Records the plan a human wrote; does not generate or validate it</td>
         </tr>
@@ -631,7 +631,7 @@
 
   <div class="callout">
     <span class="label">Reading this fairly</span>
-    Two caveats. First, this comparison describes the tool landscape around the April 2024 filing; several of these products have since added AI-assisted planning features, and a like-for-like comparison today would need re-checking. Second, the claim is not that no tool does any of these things — it is that the claimed combination runs them as one chain, with the AI model validating the wave grouping and the post-migration loop feeding subsequent waves. Individual capabilities in the table above were, and are, available separately.
+    Two caveats. First, this comparison describes the tool landscape around the April 2024 filing; several of these products have since added AI-assisted planning features, and a like-for-like comparison today would need re-checking. Second, the claim is not that no tool does any of these things. It is that the claimed combination runs them as one chain, with the AI model validating the wave grouping and the post-migration loop feeding subsequent waves. Individual capabilities in the table above were, and are, available separately.
   </div>
 
   <p class="navback"><a href="../">← back to index</a> · <a href="us12124869-claim-map.html">companion patent: US 12,124,869</a></p>

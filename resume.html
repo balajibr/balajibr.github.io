@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Balaji Ramakrishnan, Resume</title>
+<meta name="description" content="Resume of Balaji Ramakrishnan, AI/ML architect. 27 years in distributed systems and cloud architecture, named inventor on three US patents." />
+<style>
+  :root {
+    --paper: #eef0e8;
+    --card: #fbfcf7;
+    --ink: #1b2233;
+    --ink-soft: #4a5266;
+    --ink-faint: #6b7285;
+    --rule: #c9c6b4;
+    --rule-soft: #dcd9ca;
+    --accent: #2c5b82;
+    --accent-wash: #dde7ee;
+    --brass: #8f6a2e;
+    --brass-wash: #efe6d3;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--paper);
+    color: var(--ink);
+  }
+
+  body {
+    font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .mono {
+    font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+    font-variant-numeric: tabular-nums;
+  }
+
+  a { color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent-wash); }
+  a:hover { border-bottom-color: var(--accent); }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  .sheet {
+    max-width: 840px;
+    margin: 0 auto;
+    background: var(--card);
+    border-left: 1px solid var(--rule);
+    border-right: 1px solid var(--rule);
+    min-height: 100vh;
+    padding: 0 56px 72px;
+  }
+  @media (max-width: 640px) {
+    .sheet { padding: 0 22px 56px; border: none; }
+  }
+
+  .topbar {
+    font-size: 12px;
+    padding: 14px 0 0;
+  }
+  .topbar a { color: var(--ink-faint); border-bottom-color: transparent; }
+  .topbar a:hover { color: var(--accent); border-bottom-color: var(--accent-wash); }
+
+  /* ---- masthead ---- */
+  header.masthead {
+    padding: 26px 0 22px;
+    border-bottom: 3px double var(--ink);
+    margin-bottom: 30px;
+  }
+  h1 {
+    font-size: 34px;
+    letter-spacing: 0.02em;
+    margin: 0 0 6px;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+  .tagline {
+    font-size: 15.5px;
+    color: var(--ink-soft);
+    font-style: italic;
+    margin: 0 0 16px;
+    max-width: 62ch;
+  }
+  .contact {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 20px;
+    font-size: 13px;
+  }
+  .contact span { color: var(--ink-faint); }
+  .contact .label {
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 10.5px;
+    margin-right: 6px;
+  }
+
+  /* ---- sections ---- */
+  section { margin: 0 0 34px; }
+  h2 {
+    font-size: 12px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--brass);
+    margin: 0 0 14px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--rule);
+    font-weight: 700;
+  }
+  h2 .h2note {
+    float: right;
+    text-transform: none;
+    letter-spacing: 0;
+    font-size: 11.5px;
+    font-weight: 400;
+    color: var(--ink-faint);
+  }
+
+  p { margin: 0 0 12px; }
+  .lede { font-size: 15px; max-width: 68ch; }
+
+  ul { margin: 0; padding-left: 18px; }
+  li { margin: 0 0 6px; font-size: 14.5px; }
+  li:last-child { margin-bottom: 0; }
+  strong { font-weight: 700; }
+
+  /* ---- expertise grid ---- */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px 30px;
+  }
+  @media (max-width: 640px) {
+    .grid { grid-template-columns: 1fr; }
+  }
+  .grid h3 {
+    font-size: 13.5px;
+    margin: 0 0 3px;
+    font-weight: 700;
+  }
+  .grid p {
+    font-size: 13.5px;
+    color: var(--ink-soft);
+    margin: 0;
+  }
+
+  /* ---- roles ---- */
+  .role { margin: 0 0 22px; }
+  .role:last-child { margin-bottom: 0; }
+  .role-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 16px;
+    margin-bottom: 6px;
+    flex-wrap: wrap;
+  }
+  .role-title {
+    font-size: 15.5px;
+    font-weight: 700;
+    margin: 0;
+  }
+  .role-title .org { color: var(--accent); }
+  .role-when {
+    font-size: 12px;
+    color: var(--ink-faint);
+    white-space: nowrap;
+  }
+
+  /* ---- patents ---- */
+  .patent {
+    display: grid;
+    grid-template-columns: 128px 1fr;
+    gap: 4px 18px;
+    font-size: 14px;
+    padding: 9px 0;
+    border-bottom: 1px solid var(--rule-soft);
+  }
+  .patent:last-of-type { border-bottom: none; }
+  @media (max-width: 640px) {
+    .patent { grid-template-columns: 1fr; gap: 2px; }
+  }
+  .patent .num { color: var(--accent); font-weight: 700; font-size: 13px; }
+  .patent .links {
+    font-size: 12px;
+    color: var(--ink-faint);
+    margin-top: 2px;
+  }
+
+  /* ---- certifications ---- */
+  .certs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px 30px;
+    list-style: none;
+    padding: 0;
+  }
+  @media (max-width: 640px) {
+    .certs { grid-template-columns: 1fr; }
+  }
+  .certs li {
+    font-size: 13.5px;
+    margin: 0;
+    padding-left: 11px;
+    border-left: 2px solid var(--accent-wash);
+  }
+  .certs .certmeta {
+    display: block;
+    font-size: 11.5px;
+    color: var(--ink-faint);
+  }
+
+  footer {
+    margin-top: 40px;
+    padding-top: 14px;
+    border-top: 1px solid var(--rule);
+    font-size: 11.5px;
+    color: var(--ink-faint);
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  /* ---- print ---- */
+  @page { margin: 16mm 15mm; }
+  @media print {
+    html, body { background: #fff; color: #000; }
+    .sheet {
+      background: #fff;
+      border: none;
+      max-width: none;
+      padding: 0;
+      min-height: 0;
+      font-size: 10.5pt;
+    }
+    .topbar, footer { display: none; }
+    a { color: #000; border-bottom: none; }
+    h1 { font-size: 22pt; }
+    h2 { color: #000; }
+    .patent .num, .role-title .org { color: #000; }
+    .certs li { background: none; border: 1px solid #999; }
+    .role, .patent { break-inside: avoid; page-break-inside: avoid; }
+    section { margin-bottom: 16pt; }
+    header.masthead { padding-top: 0; }
+  }
+</style>
+</head>
+<body>
+
+<div class="sheet">
+
+  <div class="topbar"><a href="./">← balajibr.github.io</a></div>
+
+  <header class="masthead">
+    <h1>Balaji Ramakrishnan</h1>
+    <p class="tagline">AI/ML architect. Twenty-seven years building distributed systems, cloud platforms, and now agentic AI. Hands-on from architecture through to shipped code.</p>
+    <div class="contact">
+      <span><span class="label mono">Email</span><a href="mailto:br.balaji+resume@gmail.com">br.balaji+resume@gmail.com</a></span>
+      <span><span class="label mono">LinkedIn</span><a href="https://www.linkedin.com/in/balajibr/">linkedin.com/in/balajibr</a></span>
+      <span><span class="label mono">Site</span><a href="./">balajibr.github.io</a></span>
+    </div>
+  </header>
+
+  <section>
+    <h2>Profile</h2>
+    <p class="lede">Builder-engineer-consultant working end to end: architecture, code, debugging, and shipping bespoke agentic solutions. Currently focused on research and development of agentic AI systems and industry-specific AI products at Onix. Previously delivered production AI and large-scale cloud automation at Google and Microsoft. Named inventor on three granted US patents in cloud infrastructure and security automation.</p>
+  </section>
+
+  <section>
+    <h2>Core Expertise</h2>
+    <div class="grid">
+      <div>
+        <h3>Agentic Orchestration</h3>
+        <p>Production-grade multi-agent LLM systems using agent orchestration tools and graph-based frameworks.</p>
+      </div>
+      <div>
+        <h3>Enterprise-Scale RAG &amp; Retrieval</h3>
+        <p>Resilient retrieval systems and knowledge catalogs bridging static enterprise data and autonomous LLM reasoning.</p>
+      </div>
+      <div>
+        <h3>Distributed Systems &amp; Infrastructure</h3>
+        <p>Deep roots in GCP and Azure; applications built for high-concurrency cloud environments.</p>
+      </div>
+      <div>
+        <h3>Production-Grade AI Evals</h3>
+        <p>Rigorous human-in-the-loop testing and observability frameworks for AI systems.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Experience <span class="h2note"><a href="https://www.linkedin.com/in/balajibr/">full history on LinkedIn</a></span></h2>
+
+    <div class="role">
+      <div class="role-head">
+        <p class="role-title">AI/ML Architect · <span class="org">Onix</span></p>
+        <span class="role-when mono">2023 - Present</span>
+      </div>
+      <ul>
+        <li>Build rapid prototypes and carry them into production-ready agentic workflows using generative AI.</li>
+        <li>Develop industry-specific <strong>vision language models</strong> for legacy system computer interaction; optimize and fine-tune domain-specific <strong>small language models</strong>.</li>
+        <li>Architect complex agentic workflows using <strong>ADK</strong>, <strong>LangGraph</strong>, and custom frameworks built on Apache Airflow-inspired DAGs to solve domain-specific business problems.</li>
+      </ul>
+    </div>
+
+    <div class="role">
+      <div class="role-head">
+        <p class="role-title">Solutions Architect · <span class="org">Google</span></p>
+        <span class="role-when mono">2018 - 2023</span>
+      </div>
+      <ul>
+        <li>Implemented customized <strong>Document AI processors</strong> for lending document types, acting as a critical feedback loop into product engineering on the document intelligence roadmap.</li>
+        <li>Built automated <strong>RFP response systems</strong> and pipeline analytics tooling for data-driven decision-making.</li>
+        <li>Led technical strategy and enablement for <strong>GSI partners</strong>, driving GCP capability and certification across Data Analytics and AI/ML.</li>
+      </ul>
+    </div>
+
+    <div class="role">
+      <div class="role-head">
+        <p class="role-title">Engineering Lead · <span class="org">Microsoft</span></p>
+        <span class="role-when mono">2005 - 2018</span>
+      </div>
+      <ul>
+        <li>Software engineering lead for <strong>Managed Services for Cloud</strong>, running multi-tenant solutions across Azure IaaS, PaaS, and O365.</li>
+        <li>Designed hybrid storage <strong>resource providers for Azure Stack</strong> (formerly Windows Azure Pack), securing major storage provider contracts.</li>
+        <li>Implemented <strong>cloud hydration with System Center DCS</strong>, enabling data-driven multi-tier workload deployment through Azure Resource Manager and SCVMM.</li>
+      </ul>
+    </div>
+
+    <div class="role">
+      <div class="role-head">
+        <p class="role-title">Software Engineer · <span class="org">Honeywell</span></p>
+        <span class="role-when mono">2001 - 2005</span>
+      </div>
+      <ul>
+        <li>Developed remote automation products for oil and refinery enterprises as a core engineering team member on Production Planning, Production Analyst, and Operations Management applications.</li>
+        <li>Implemented dynamic cubes for production modeling, and modeling and automation strategies for refinery planning workflows.</li>
+      </ul>
+    </div>
+
+    <div class="role">
+      <div class="role-head">
+        <p class="role-title">Software Engineer · <span class="org">Wipro</span></p>
+        <span class="role-when mono">1999 - 2001</span>
+      </div>
+      <ul>
+        <li>Built and customized <strong>DynaWeb</strong>, a distributed content management and e-publishing platform, for <strong>Bombardier Aerospace</strong>'s move from paper documentation to <strong>Interactive Electronic Technical Manuals</strong> across the CRJ and Q400 fleets.</li>
+        <li>Delivered structured <strong>SGML/XML</strong> publishing pipelines against aviation data standards, serving maintenance manuals, wiring manuals, and illustrated parts catalogs over intranet, extranet, and offline media.</li>
+        <li>Implemented <strong>searchable, zoomable vector illustrations</strong> indexed to component level, letting maintenance engineers locate an individual part within a complex assembly.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Patents</h2>
+    <p style="font-size:13.5px;color:var(--ink-soft);margin-bottom:10px;">Named inventor on three granted US patents, assigned to Onix Networking Corp. Annotated reading notes for each are published on this site.</p>
+
+    <div class="patent">
+      <div class="num mono">US 12,124,869 B1</div>
+      <div>
+        System and method to automate migration of one or more resources to a cloud
+        <div class="links">Granted October 22, 2024 · <a href="patents/us12124869-claim-map.html">reading notes</a> · <a href="https://patents.google.com/patent/US12124869">official record</a></div>
+      </div>
+    </div>
+
+    <div class="patent">
+      <div class="num mono">US 12,204,505 B1</div>
+      <div>
+        Computer-implemented system for organizing data migration and a method thereof
+        <div class="links">Granted January 21, 2025 · <a href="patents/us12204505-claim-map.html">reading notes</a> · <a href="https://patents.google.com/patent/US12204505">official record</a></div>
+      </div>
+    </div>
+
+    <div class="patent">
+      <div class="num mono">US 12,265,631 B1</div>
+      <div>
+        System and method to analyze security across digital environments
+        <div class="links">Granted April 1, 2025 · <a href="patents/us12265631-claim-map.html">reading notes</a> · <a href="https://patents.google.com/patent/US12265631">official record</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Certifications <span class="h2note">all Google Cloud, <a href="https://www.credly.com/users/balaji.ramakrishnan/badges">verify on Credly</a></span></h2>
+    <ul class="certs">
+      <li>
+        <a href="https://www.credly.com/badges/02a4012e-9baf-412d-9a47-e84c572b0a3d">Professional Cloud Security Engineer</a>
+        <span class="certmeta mono">2026, valid to 2028</span>
+      </li>
+      <li>
+        <a href="https://www.credly.com/badges/1725938f-f1cc-4f6e-a7fa-6faba209599e">Generative AI Leader</a>
+        <span class="certmeta mono">2025, valid to 2028</span>
+      </li>
+      <li>
+        <a href="https://www.credly.com/badges/be3b06dd-4dec-48ab-ad08-c218200477ab">Google Cloud Authorized Trainer</a>
+        <span class="certmeta mono">2025</span>
+      </li>
+      <li>
+        <a href="https://www.credly.com/badges/6f2f01a5-8609-4663-bb0b-d428483d5654">Professional Data Engineer</a>
+        <span class="certmeta mono">2024, valid to 2028</span>
+      </li>
+      <li>
+        <a href="https://www.credly.com/badges/053e3edb-51a6-461d-a138-6c6159cb7748">Professional Machine Learning Engineer</a>
+        <span class="certmeta mono">2022, valid to 2028</span>
+      </li>
+      <li>
+        <a href="https://www.credly.com/badges/a0393bfe-0b76-4ecd-aab2-a93e3922f955">Professional Cloud Architect</a>
+        <span class="certmeta mono">2019, valid to 2027</span>
+      </li>
+    </ul>
+  </section>
+
+  <footer>
+    <span>Balaji Ramakrishnan · <a href="./">balajibr.github.io</a></span>
+    <span>Also see <a href="notes/career.html">career notes</a></span>
+  </footer>
+
+</div>
+</body>
+</html>

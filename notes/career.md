@@ -2,54 +2,80 @@
 
 # Career notes
 
-*Draft — v1. The factual arc is here; the parts worth actually reading are the ones only I can fill in. Marked below.*
+*Draft, v2. The factual arc is here. The parts worth actually reading are the ones only I can fill in, marked below.*
 
 ---
 
-Twenty-five years is long enough that the industry I started in and the one I work in now share very little vocabulary. What follows is less a career history than an attempt to name what actually changed at each stage, and what carried over.
+Twenty-seven years, 1999 to now. Long enough that the industry I started in and the one I work in today share very little vocabulary.
 
-## Honeywell — industrial software, and what "production" means
+Writing this down, I noticed two threads I had not consciously connected before. One is making complicated information findable. The other is automating the judgment that sits between two steps that are already automated. Almost everything below is one or the other.
 
-I started in refinery and oil enterprise software: production planning, production analysis, operations management. Dynamic cubes for production modeling, workflow automation for refinery planning. Remote automation products for plants that could not simply be restarted.
+## Wipro, 1999 to 2001: structured documents
 
-That last part is the thing that stuck. In industrial software, the cost of being wrong is not a rolled-back deploy — it is a process unit that has to be brought down. You learn to think about failure modes before features, and to treat "it works on my machine" as roughly meaningless. Everything I later found unremarkable about production discipline, I learned first in a context where the physical world was downstream of the code.
+I started on DynaWeb, a distributed content management and e-publishing system. The customer was Bombardier Aerospace, and the job was getting them off paper. What came out the other side were Interactive Electronic Technical Manuals for the CRJ and Q400 fleets: maintenance manuals, wiring manuals, illustrated parts catalogs.
 
-<!-- TODO: Balaji — what actually made you leave? Was there a specific project or a specific ceiling? Any story from the refinery work that still comes to mind? -->
+Underneath it was structured SGML, held to aviation industry data standards. It served over corporate intranets and extranets, and also shipped on disc, so a mechanic in a hangar with no network could still pull up the manual.
 
-## Microsoft — thirteen years, and the shift to platform
+The engineering problem was formatting on the fly. Raw structured data went in, and stylesheets applied presentation dynamically depending on which browser was asking. In 1999 that meant fighting Netscape and Internet Explorer at the same time. Long compilation times, unforgiving DTDs, and a document model that had no tolerance for sloppiness, because the documentation described aircraft.
 
-Thirteen years is the longest chapter, and it spans the industry's move to cloud almost exactly. Software engineering lead for Managed Services for Cloud, running multi-tenant solutions across Azure IaaS, PaaS, and O365. Hybrid storage resource providers for Azure Stack, back when it was still Windows Azure Pack. Cloud hydration with System Center DCS — data-driven, multi-tier workload deployment through Azure Resource Manager and SCVMM.
+The piece I remember most clearly is the illustrations. We embedded vector graphics, catalogued them, and pushed them into the search index. Someone working on a complex engine assembly could search for a single screw or bolt and zoom straight to it. That was really the point of the whole project. Not digitizing paper, but building a structure precise enough that any individual component on an aircraft became addressable.
 
-The change in this period was one of altitude. At Honeywell I built applications; at Microsoft I built the substrate other people built applications on. Those are genuinely different disciplines. Platform work means your users are engineers, your failure modes are other teams' outages, and your best design decisions are the ones nobody ever notices. It also means arguing about abstractions for months, because the abstraction is the product.
+I did not think of it that way at the time. It was a retrieval problem over structured technical data. I would end up back at that same problem twice more.
 
-<!-- TODO: Balaji — thirteen years is a long time. What were the two or three distinct eras inside it? Was the Azure Stack work the peak, or something else? What made you stay that long, and then what made you go? -->
+<!-- TODO: Balaji, two things here. (a) Worth checking the specifics before this goes public: the exact data standards, and how much of the stylesheet and DTD detail is your own memory versus reconstructed after the fact. I deliberately kept the resume version vaguer. (b) What made you move to Honeywell? -->
 
-## Google — the consulting altitude, and Document AI
+## Honeywell, 2001 to 2005: what production actually means
 
-Four years as a solutions architect. Customized Document AI processors for lending document types, and acting as a feedback loop back into product engineering on the document intelligence roadmap. Automated RFP response systems and pipeline analytics. Technical strategy and enablement for GSI partners across Data Analytics and AI/ML.
+Refinery and oil enterprise software. Production planning, production analysis, operations management. Dynamic cubes for production modeling, workflow automation for refinery planning, and remote automation products for plants that could not simply be restarted.
 
-This was the first stage where the work was primarily *outward-facing*. Not building the platform, not building on it, but sitting between the two — translating what customers actually needed into something the product team could act on, and translating the product's real capabilities into something a customer could plan around. It is a genuinely different skill from engineering, and I underestimated it before doing it.
+That last part is what stuck. In industrial software the cost of being wrong is not a rolled-back deploy. It is a process unit that has to be brought down. You learn to think about failure modes before you think about features, and "it works on my machine" stops meaning anything.
 
-It was also my first sustained exposure to ML systems in production rather than in demos, and specifically to the gap between a model that performs well on a benchmark and a processor that survives contact with real lending documents.
+Everything I later took for granted about production discipline, I learned here first, in a place where the physical world was downstream of the code.
 
-<!-- TODO: Balaji — the Document AI work: what was the hardest customer problem? And what did you learn about ML in production that surprised you? Also: what pulled you toward Onix? -->
+<!-- TODO: Balaji, was there a specific project or a specific ceiling that ended this chapter? Any story from the refinery work that still comes to mind? -->
 
-## Onix — building again, and the patents
+## Microsoft, 2005 to 2018: the shift to platform
 
-AI/ML architect since 2023. Rapid prototypes carried into production agentic workflows. Vision language models for legacy system interaction — getting a model to operate software that has no API. Fine-tuned small language models for domain-specific work. Agentic orchestration with ADK, LangGraph, and custom frameworks built on Airflow-inspired DAGs.
+Thirteen years, and they line up almost exactly with the industry's move to cloud.
 
-The three patents come from this period and the cloud migration work around it. The thread running through all of them is the same observation: the individual capabilities existed, but nobody had automated the *judgment between* them. Migration assessment tools could inventory an estate but not decide the wave plan. Scanners could find vulnerabilities but not predict what would break if you fixed them. In both cases the missing piece was the reasoning step in the middle, and in both cases that turned out to be patentable because nobody had built it as one chain.
+Software engineering lead for Managed Services for Cloud, running multi-tenant solutions across Azure IaaS, PaaS, and O365. Hybrid storage resource providers for Azure Stack, back when it was still called Windows Azure Pack. Cloud hydration with System Center DCS, doing data-driven multi-tier workload deployment through Azure Resource Manager and SCVMM.
 
-That framing — look for the human judgment sitting between two automated steps — is the most portable thing I have learned. It is also, not coincidentally, what agentic systems are for.
+The change here was altitude. At Honeywell I built applications. At Microsoft I built the thing other people built applications on. Those are different jobs. In platform work your users are engineers, your failure modes are other teams' outages, and your best decisions are the ones nobody ever notices. You also spend months arguing about abstractions, because the abstraction is the product.
 
-<!-- TODO: Balaji — the patent origin stories. Who had the idea first? What did the first working version look like? Also worth saying: what does the agentic work look like day to day, and what do you think is overhyped about it? -->
+<!-- TODO: Balaji, thirteen years is a long time. What were the two or three distinct eras inside it? Was Azure Stack the peak, or something else? What kept you there, and then what ended it? -->
+
+## Google, 2018 to 2023: consulting, and documents again
+
+Five years as a solutions architect. Customized Document AI processors for lending document types, and acting as a feedback loop back into product engineering on the document intelligence roadmap. Automated RFP response systems and pipeline analytics. Technical strategy and enablement for GSI partners across Data Analytics and AI/ML.
+
+Two things were new. The first was that the work faced outward. Not building the platform, not building on it, but sitting between the two. Translating what customers actually needed into something the product team could act on, and translating what the product could actually do into something a customer could plan around. It is a different skill from engineering and I underestimated it before I had to do it.
+
+The second was the return to documents. Twenty years after the aircraft manuals I was back to pulling structure out of technical documents so a machine could act on it. The difference is that the structure now had to be inferred by a model instead of enforced by a DTD. In 1999 the discipline was upstream: authors wrote to a schema and the system could rely on it. With lending documents there is no schema and no compliance, just whatever the originator happened to send. Most of the gap between a model that scores well on a benchmark and a processor that survives real documents comes down to that.
+
+<!-- TODO: Balaji, hardest Document AI customer problem? And what pulled you toward Onix? -->
+
+## Onix, 2023 to now: building again, and the patents
+
+AI/ML architect. Rapid prototypes carried through into production agentic workflows. Vision language models for legacy system interaction, which mostly means getting a model to operate software that has no API. Fine-tuned small language models for domain work. Agentic orchestration with ADK, LangGraph, and custom frameworks built on Airflow-inspired DAGs.
+
+The retrieval thread shows up here as knowledge catalogs: getting enterprise data into a shape an autonomous system can reason over. Same problem as the parts catalog, three technology generations later. The thing being indexed changed, and the consumer changed from a mechanic to a model, but the question did not. How do you make a large, messy, structured corpus addressable by something that has to act on it?
+
+The three patents come out of this period and the cloud migration work around it. They share one observation. The individual capabilities all existed already, but nobody had automated the judgment in between them. Migration assessment tools could inventory an estate but could not decide the wave plan. Scanners could find vulnerabilities but could not predict what would break if you fixed them. Both times the missing piece was the reasoning step in the middle, and both times it turned out to be patentable because nobody had built it as one chain.
+
+That habit, looking for the human judgment sitting between two automated steps, is the most portable thing I have picked up. It is also, not by coincidence, what agentic systems are for.
+
+<!-- TODO: Balaji, the patent origin stories. Who had the idea first? What did the first working version look like? Also worth saying: what does the agentic work look like day to day, and what do you think is overhyped about it? -->
 
 ## What carried over
 
-Looking back, the through-line is not technology — none of the Honeywell stack survives in what I do now. It is the habit of treating the unglamorous middle as where the real problem lives. Production discipline from industrial software, abstraction design from platform work, translation from consulting, and now the automation of judgment itself.
+None of the Wipro stack survives in what I do now. Neither does the Honeywell one. What survives is narrower and more useful than any technology.
 
-<!-- TODO: Balaji — does this framing ring true, or is it too neat? Happy to make this messier and more honest if the real arc was less linear. -->
+Production discipline from industrial software, where a bug had the physical world downstream of it. Abstraction design from platform work, where the abstraction is the product. Translation from consulting.
+
+And underneath all of it, one long argument with the same problem. How do you make a complicated body of information addressable by something that needs to act on it, whether that something is a mechanic holding a wrench or an agent holding a tool call.
+
+<!-- TODO: Balaji, does this framing ring true or is it too neat? The retrieval thread connecting Wipro to Document AI to knowledge catalogs is my read, not something you told me. Say so if it is a stretch and I will drop it. Happy to make this messier if the real path was less linear. -->
 
 ---
 
-<sub>Last updated August 2026. This is a working draft.</sub>
+<sub>Last updated August 2026. Working draft.</sub>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Claim Map — US 12,265,631 B1</title>
+<title>Claim Map, US 12,265,631 B1</title>
 <style>
   :root {
     --paper: #eef0e8;
@@ -283,7 +283,7 @@
 <div class="masthead">
   <div class="masthead-inner">
     <span class="mono">US 12,265,631 B1</span>
-    <span class="kind">CLAIM MAP — READING NOTES</span>
+    <span class="kind">CLAIM MAP · READING NOTES</span>
     <span class="mono">Granted April 1, 2025</span>
   </div>
 </div>
@@ -302,17 +302,17 @@
     <div class="biblio-row"><dt>Granted</dt><dd class="mono">April 1, 2025</dd></div>
     <div class="biblio-row"><dt>Assignee</dt><dd>Onix Networking Corp.</dd></div>
     <div class="biblio-row"><dt>Inventors</dt><dd>Ramnish Singh · Gaurav Aggarwal · Anantha Balasubramanian · <span class="me">Balaji Ramakrishnan</span> · Rajesh Kannan</dd></div>
-    <div class="biblio-row"><dt>Claims</dt><dd>12 total — 3 independent (<span class="ref">1</span> system, <span class="ref">11</span> method, <span class="ref">12</span> CRM)</dd></div>
+    <div class="biblio-row"><dt>Claims</dt><dd>12 total, 3 independent (<span class="ref">1</span> system, <span class="ref">11</span> method, <span class="ref">12</span> CRM)</dd></div>
   </dl>
 
   <div class="callout">
     <span class="label">Why this was filed</span>
-    Scanners were never the bottleneck. An enterprise could already scan its applications, operating systems, container images, and network and drown in findings from four different tools that did not talk to each other. What nobody automated was the judgment after the scan: reconciling those four report streams into one non-duplicated view, and then deciding what would actually happen <em>if you applied the fix</em> — because in production the remediation itself carries risk. Onix built a system that scores the consequence of remediating, not just the severity of the vulnerability, and lets that score gate whether the fix runs automatically. That gate is what this patent claims.
+    Scanners were never the bottleneck. An enterprise could already scan its applications, operating systems, container images, and network and drown in findings from four different tools that did not talk to each other. What nobody automated was the judgment after the scan: reconciling those four report streams into one non-duplicated view, and then deciding what would actually happen <em>if you applied the fix</em>, because in production the remediation itself carries risk. Onix built a system that scores the consequence of remediating, not just the severity of the vulnerability, and lets that score gate whether the fix runs automatically. That gate is what this patent claims.
   </div>
 
   <h2 class="section"><span class="num">I.</span>Three Modules and a Threshold</h2>
   <p class="prose">
-    Claim 1 is compact for a system claim — three modules, not six. The report generation module <span class="ref">110</span> produces four named scan reports across the software delivery pipeline. The recommendation engine <span class="ref">112</span> carries five distinct configured behaviors, and is where nearly all the claimed intelligence sits: analyze, verify against the CVE database <span class="ref">120</span>, run an impact analysis with a machine learning model, generate a score matrix against a predefined threshold, and issue recommendations. The vulnerability remediation module <span class="ref">114</span> then does one thing — use those threshold limits to initiate automated remediation. The claim&rsquo;s weight rests on what the threshold is computed from.
+    Claim 1 is compact for a system claim: three modules, not six. The report generation module <span class="ref">110</span> produces four named scan reports across the software delivery pipeline. The recommendation engine <span class="ref">112</span> carries five distinct configured behaviors, and is where nearly all the claimed intelligence sits: analyze, verify against the CVE database <span class="ref">120</span>, run an impact analysis with a machine learning model, generate a score matrix against a predefined threshold, and issue recommendations. The vulnerability remediation module <span class="ref">114</span> then does one thing, which is to use those threshold limits to initiate automated remediation. The claim&rsquo;s weight rests on what the threshold is computed from.
   </p>
 
   <figure>
@@ -370,7 +370,7 @@
         <g font-size="9.5" fill="#1b2233">
           <text x="446" y="118">1 · comprehensive analysis of reports</text>
           <text x="446" y="132">2 · verify by cross-referencing CVE</text>
-          <text x="446" y="146">3 · ML impact analysis — consequence of fixing</text>
+          <text x="446" y="146">3 · ML impact analysis, consequence of fixing</text>
           <text x="446" y="160">4 · generate score matrix vs. threshold</text>
           <text x="446" y="174">5 · provide recommendations</text>
         </g>
@@ -401,16 +401,16 @@
         <!-- the distinguishing annotation -->
         <rect x="430" y="228" width="672" height="52" fill="#efe6d3" stroke="#8f6a2e" stroke-width="1.2"></rect>
         <text x="766" y="248" text-anchor="middle" font-size="10.5" fill="#8f6a2e" font-weight="700">THE UNUSUAL LIMITATION</text>
-        <text x="766" y="266" text-anchor="middle" font-size="10" fill="#1b2233">the ML model predicts the consequence of <tspan font-style="italic">fixing</tspan> the vulnerability — not the severity of having it</text>
+        <text x="766" y="266" text-anchor="middle" font-size="10" fill="#1b2233">the ML model predicts the consequence of <tspan font-style="italic">fixing</tspan> the vulnerability, not the severity of having it</text>
         <line x1="580" y1="185" x2="580" y2="226" stroke="#8f6a2e" stroke-width="1.4" stroke-dasharray="4 3" marker-end="url(#arB)"></line>
       </svg>
     </div>
     <figcaption>
-      <span class="fig-label">Fig. 1 —</span> Claim 1&rsquo;s three modules with the patent&rsquo;s own reference numerals. Four scan streams reconcile into one view at <span class="ref">110</span>, the recommendation engine <span class="ref">112</span> carries five configured behaviors, and the score matrix threshold — not a human ticket — is what releases the automated remediation at <span class="ref">114</span>.
+      <span class="fig-label">Fig. 1.</span> Claim 1&rsquo;s three modules with the patent&rsquo;s own reference numerals. Four scan streams reconcile into one view at <span class="ref">110</span>, the recommendation engine <span class="ref">112</span> carries five configured behaviors, and the score matrix threshold, not a human ticket, is what releases the automated remediation at <span class="ref">114</span>.
     </figcaption>
   </figure>
 
-  <h2 class="section"><span class="num">II.</span>Method 400 — Eight Steps</h2>
+  <h2 class="section"><span class="num">II.</span>Method 400: Eight Steps</h2>
   <p class="prose">
     Claims 11 and 12 restate the system as method <span class="ref">400</span>, steps <span class="ref">402</span>–<span class="ref">416</span>. Five of the eight belong to the recommendation engine. The order matters and is claimed: verification against the CVE database (<span class="ref">408</span>) comes <em>before</em> the impact analysis (<span class="ref">410</span>), so that false positives and duplicates are removed before the machine learning model spends its judgment on them, and the score matrix (<span class="ref">412</span>) is generated from that analysis rather than from raw scanner severity.
   </p>
@@ -459,7 +459,7 @@
       </svg>
     </div>
     <figcaption>
-      <span class="fig-label">Fig. 2 —</span> Method <span class="ref">400</span>&rsquo;s eight steps. The two brass steps are the claimed novelty: an ML impact analysis of the remediation, and a score matrix built from it.
+      <span class="fig-label">Fig. 2.</span> Method <span class="ref">400</span>&rsquo;s eight steps. The two brass steps are the claimed novelty: an ML impact analysis of the remediation, and a score matrix built from it.
     </figcaption>
   </figure>
 
@@ -475,7 +475,7 @@
         <tr class="independent">
           <td class="claimno"><span class="ref">1</span></td>
           <td>System</td>
-          <td>Hardware processor and memory hosting three modules — report generation <span class="ref">110</span>, recommendation engine <span class="ref">112</span> with five configured behaviors, vulnerability remediation <span class="ref">114</span></td>
+          <td>Hardware processor and memory hosting three modules: report generation <span class="ref">110</span>, recommendation engine <span class="ref">112</span> with five configured behaviors, vulnerability remediation <span class="ref">114</span></td>
         </tr>
         <tr class="independent">
           <td class="claimno"><span class="ref">11</span></td>
@@ -513,7 +513,7 @@
 
   <h2 class="section"><span class="num">IV.</span>How This Differs From Existing Tools</h2>
   <p class="prose">
-    Vulnerability management is a mature market, and risk-based prioritization is its standard feature — Tenable&rsquo;s VPR, Qualys TruRisk, Rapid7 Active Risk, and Wiz&rsquo;s attack-path analysis all rank findings by exploitability, asset criticality, and threat intelligence rather than raw CVSS. All of that scores the same object: how dangerous it is to <em>have</em> the vulnerability. The claimed system scores a different object. Its machine learning model conducts an impact analysis to &ldquo;determine the consequence of fixing&rdquo; the vulnerability — the side effects and unintended consequences of the remediation itself — and the resulting matrix is what gates automatic action.
+    Vulnerability management is a mature market, and risk-based prioritization is its standard feature. Tenable&rsquo;s VPR, Qualys TruRisk, Rapid7 Active Risk, and Wiz&rsquo;s attack-path analysis all rank findings by exploitability, asset criticality, and threat intelligence rather than raw CVSS. All of that scores the same object: how dangerous it is to <em>have</em> the vulnerability. The claimed system scores a different object. Its machine learning model conducts an impact analysis to &ldquo;determine the consequence of fixing&rdquo; the vulnerability, meaning the side effects and unintended consequences of the remediation itself, and the resulting matrix is what gates automatic action.
   </p>
 
   <div class="table-wrap">
@@ -524,27 +524,27 @@
       </thead>
       <tbody>
         <tr>
-          <td>Risk-based vulnerability management — Tenable VPR, Qualys TruRisk, Rapid7 Active Risk</td>
+          <td>Risk-based vulnerability management. Tenable VPR, Qualys TruRisk, Rapid7 Active Risk</td>
           <td>Ranks findings by exploitability, asset criticality, KEV/EPSS signals</td>
           <td>Scores the risk of the vulnerability; the claim scores the predicted consequence of applying the fix</td>
         </tr>
         <tr>
-          <td>Cloud-native security — Wiz, Prisma Cloud, Orca</td>
+          <td>Cloud-native security. Wiz, Prisma Cloud, Orca</td>
           <td>Attack-path analysis across cloud workloads, containers, CI/CD</td>
           <td>Strong on cloud posture, but does not reconcile OS and traditional network scan streams into the same rationalized view</td>
         </tr>
         <tr>
-          <td>Developer-first scanning — Snyk, Dependabot</td>
+          <td>Developer-first scanning. Snyk, Dependabot</td>
           <td>Dependency, container and IaC scanning with automated fix pull requests</td>
           <td>Automates the fix, but gates it on tests and human review rather than a predicted-impact score matrix</td>
         </tr>
         <tr>
-          <td>Security orchestration — Splunk SOAR, Torq, Tines</td>
+          <td>Security orchestration. Splunk SOAR, Torq, Tines</td>
           <td>Executes remediation playbooks automatically when conditions match</td>
           <td>Conditions are author-written rules; here the trigger threshold is computed by the ML model from the impact analysis</td>
         </tr>
         <tr>
-          <td>Aggregation layers — ASPM and vulnerability aggregation platforms</td>
+          <td>Aggregation layers. ASPM and vulnerability aggregation platforms</td>
           <td>Normalizes findings from multiple scanners and de-duplicates</td>
           <td>Closest on the reconciliation step, but stops at a prioritized queue rather than continuing to threshold-gated automated remediation</td>
         </tr>
@@ -554,7 +554,7 @@
 
   <div class="callout">
     <span class="label">Reading this fairly</span>
-    The comparison reflects the landscape around the November 2024 filing, and this market moves quickly — several vendors have since expanded their automated-remediation and blast-radius-prediction features, so a current head-to-head would need re-checking. The claim is also not that predicting remediation side effects is unknown as an idea; it is that this specific chain — four scan streams reconciled, CVE-verified, ML-analyzed for the consequence of fixing, scored into a matrix, and that matrix&rsquo;s threshold used to release automated remediation — is claimed as one system.
+    The comparison reflects the landscape around the November 2024 filing, and this market moves quickly, and several vendors have since expanded their automated-remediation and blast-radius-prediction features, so a current head-to-head would need re-checking. The claim is also not that predicting remediation side effects is unknown as an idea; it is that this specific chain, four scan streams reconciled, CVE-verified, ML-analyzed for the consequence of fixing, scored into a matrix, and that matrix&rsquo;s threshold used to release automated remediation, is claimed as one system.
   </div>
 
   <p class="navback"><a href="../">← back to index</a></p>
