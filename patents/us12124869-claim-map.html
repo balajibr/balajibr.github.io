@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Claim Map — US 12,124,869 B1</title>
+<style>
+  :root {
+    --paper: #eef0e8;
+    --paper-raised: #f8f9f2;
+    --ink: #1b2233;
+    --ink-soft: #4a5266;
+    --rule: #c3c0ac;
+    --rule-soft: #d8d5c4;
+    --blueprint: #2c5b82;
+    --blueprint-wash: #dde7ee;
+    --brass: #8f6a2e;
+    --brass-wash: #efe6d3;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--paper);
+    color: var(--ink);
+  }
+
+  body {
+    font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif;
+    font-size: 16px;
+    line-height: 1.55;
+  }
+
+  .mono {
+    font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .ref {
+    font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+    color: var(--blueprint);
+    font-weight: 700;
+  }
+
+  /* ---- running patent-style header, repeated once at top ---- */
+  .masthead {
+    border-bottom: 1px solid var(--ink);
+    padding: 10px 0 6px;
+  }
+  .masthead-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 0 24px;
+    font-size: 12px;
+    letter-spacing: 0.06em;
+  }
+  .masthead .mono { color: var(--ink-soft); }
+  .masthead .kind { color: var(--brass); font-weight: 700; }
+
+  main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 24px 80px;
+  }
+
+  /* ---- title block ---- */
+  .titleblock {
+    text-align: center;
+    padding: 40px 0 28px;
+    border-bottom: 3px double var(--ink);
+    margin-bottom: 30px;
+  }
+  .eyebrow {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--brass);
+    margin: 0 0 14px;
+  }
+  h1.title {
+    font-size: 26px;
+    line-height: 1.28;
+    letter-spacing: 0.01em;
+    margin: 0 0 10px;
+    text-transform: uppercase;
+    text-wrap: balance;
+    font-weight: 700;
+  }
+  .subtitle {
+    font-size: 15px;
+    color: var(--ink-soft);
+    font-style: italic;
+    margin: 0;
+  }
+
+  /* ---- bibliographic strip ---- */
+  .biblio {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 13.5px;
+    margin: 26px 0 34px;
+    padding: 16px 20px;
+    background: var(--paper-raised);
+    border: 1px solid var(--rule);
+  }
+  .biblio-row {
+    display: grid;
+    grid-template-columns: 130px 1fr;
+    gap: 16px;
+    align-items: baseline;
+  }
+  .biblio dt {
+    color: var(--ink-soft);
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+  }
+  .biblio dd { margin: 0; }
+  .me {
+    background: var(--brass-wash);
+    box-shadow: 0 0 0 2px var(--brass-wash);
+    color: var(--ink);
+    font-weight: 700;
+  }
+
+  /* ---- abstract / quoted-verbatim box ---- */
+  .verbatim {
+    border-left: 3px solid var(--blueprint);
+    background: var(--paper-raised);
+    padding: 16px 20px;
+    margin: 24px 0;
+    font-size: 14.5px;
+  }
+  .verbatim .label {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--blueprint);
+    display: block;
+    margin-bottom: 6px;
+  }
+  .verbatim p { margin: 0 0 8px; }
+  .verbatim p:last-child { margin-bottom: 0; }
+
+  /* ---- section headings, patent-style: centered small caps ---- */
+  h2.section {
+    text-align: center;
+    font-size: 15px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin: 52px 0 22px;
+    font-weight: 700;
+  }
+  h2.section .num {
+    color: var(--brass);
+    margin-right: 8px;
+  }
+
+  h3.sub {
+    font-size: 15px;
+    font-weight: 700;
+    margin: 28px 0 10px;
+    font-style: italic;
+  }
+
+  p { margin: 0 0 14px; }
+
+  .prose {
+    column-count: 2;
+    column-gap: 2.4rem;
+    font-size: 14.5px;
+  }
+  @media (max-width: 640px) {
+    .prose { column-count: 1; }
+  }
+
+  /* ---- tables ---- */
+  .table-wrap {
+    overflow-x: auto;
+    margin: 18px 0 26px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13.5px;
+  }
+  caption {
+    text-align: left;
+    font-size: 11px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin-bottom: 8px;
+    caption-side: top;
+  }
+  th {
+    text-align: left;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    border-bottom: 1px solid var(--ink);
+    padding: 8px 10px;
+    font-weight: 700;
+  }
+  td {
+    padding: 9px 10px;
+    border-bottom: 1px solid var(--rule-soft);
+    vertical-align: top;
+  }
+  tr:last-child td { border-bottom: 1px solid var(--ink); }
+  td.claimno, th.claimno { white-space: nowrap; width: 1%; }
+  td.claimno .ref { font-size: 13px; }
+  tr.independent td { background: var(--blueprint-wash); }
+
+  /* ---- figures ---- */
+  figure {
+    margin: 30px 0 34px;
+  }
+  .fig-wrap {
+    overflow-x: auto;
+    background: var(--paper-raised);
+    border: 1px solid var(--rule);
+    padding: 12px 4px;
+  }
+  figure svg { display: block; min-width: 760px; margin: 0 auto; }
+  figcaption {
+    font-size: 13px;
+    color: var(--ink-soft);
+    margin-top: 10px;
+    line-height: 1.5;
+  }
+  figcaption .fig-label {
+    font-weight: 700;
+    color: var(--ink);
+    font-style: normal;
+  }
+  figcaption em { color: var(--blueprint); font-style: italic; }
+
+  .legend {
+    display: flex;
+    gap: 22px;
+    flex-wrap: wrap;
+    font-size: 12px;
+    color: var(--ink-soft);
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px solid var(--rule-soft);
+  }
+  .legend span { display: inline-flex; align-items: center; gap: 6px; }
+  .swatch { width: 22px; height: 0; border-top: 2px solid var(--blueprint); display: inline-block; }
+  .swatch.dashed { border-top-style: dashed; border-top-color: var(--ink-soft); }
+
+  /* ---- callout ---- */
+  .callout {
+    border: 1px solid var(--brass);
+    background: var(--brass-wash);
+    padding: 14px 18px;
+    font-size: 13.5px;
+    margin: 22px 0;
+  }
+  .callout .label {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--brass);
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 700;
+  }
+
+  .navback {
+    font-size: 12px;
+    margin: 22px 0 0;
+  }
+  .navback a { color: var(--blueprint); text-decoration: none; border-bottom: 1px solid var(--blueprint-wash); }
+  .navback a:hover { border-bottom-color: var(--blueprint); }
+
+  footer {
+    margin-top: 60px;
+    padding-top: 18px;
+    border-top: 3px double var(--ink);
+    font-size: 12px;
+    color: var(--ink-soft);
+    text-align: center;
+  }
+  footer a { color: var(--blueprint); text-decoration: none; border-bottom: 1px solid var(--blueprint-wash); }
+  footer a:hover { border-bottom-color: var(--blueprint); }
+  footer .stamp {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 4px 12px;
+    border: 1px solid var(--brass);
+    color: var(--brass);
+    letter-spacing: 0.1em;
+    font-size: 10.5px;
+    text-transform: uppercase;
+  }
+</style>
+</head>
+<body>
+
+<div class="masthead">
+  <div class="masthead-inner">
+    <span class="mono">US 12,124,869 B1</span>
+    <span class="kind">CLAIM MAP — READING NOTES</span>
+    <span class="mono">Granted October 22, 2024</span>
+  </div>
+</div>
+
+<main>
+
+  <div class="titleblock">
+    <p class="eyebrow">United States Patent · Utility · Kind Code B1</p>
+    <h1 class="title">System and Method to Automate<br />Migration of One or More Resources to a Cloud</h1>
+    <p class="subtitle">An annotated claim map of U.S. Patent No. 12,124,869 B1, built from the granted patent text</p>
+  </div>
+
+  <dl class="biblio">
+    <div class="biblio-row"><dt>Patent No.</dt><dd class="mono">US 12,124,869 B1</dd></div>
+    <div class="biblio-row"><dt>Filed</dt><dd class="mono">April 12, 2024</dd></div>
+    <div class="biblio-row"><dt>Granted</dt><dd class="mono">October 22, 2024</dd></div>
+    <div class="biblio-row"><dt>Assignee</dt><dd>Onix Networking Corp.</dd></div>
+    <div class="biblio-row"><dt>Inventors</dt><dd>Sanjay Singh · Patrick Schablitzki · Ramnish Singh · Jay Jambotkar · Anantha Balasubramanian · <span class="me">Balaji Ramakrishnan</span> · Rajesh Kannan</dd></div>
+  </dl>
+
+  <div class="verbatim">
+    <span class="label">Field of Invention — col. 1, verbatim</span>
+    <p>&ldquo;Embodiments of the present disclosure relate to a field of data migration and more particularly to a system and a method to automate migration of one or more resources to a cloud.&rdquo;</p>
+    <span class="label" style="margin-top:10px;">Background — col. 1, paraphrased</span>
+    <p>Migration waves are today prepared manually from infrastructure inventories, application logs, database inventories, and compliance reports — a process the patent characterizes as slow, costly, and prone to data-security, accuracy, and compliance failures. The claimed invention automates that wave-planning-through-deployment sequence end to end.</p>
+  </div>
+
+  <div class="callout">
+    <span class="label">Why this was filed</span>
+    At the time, there was no single tool that carried a migration from wave plan to running application in the cloud — teams stitched together a landing-zone provisioner, a storage tool, a network tool, a database-migration tool, a server lift-and-shift tool, and an application deployment tool by hand, with an engineer gluing each handoff to the next. Onix had already built a system that did all six stages itself, chaining the output of one stage into the trigger for the next, and set out to patent that specific chain rather than any one stage in isolation. The plans this system consumes as input are themselves the claimed output of a companion filing, <a href="us12204505-claim-map.html">US 12,204,505</a>, filed one week earlier by the same seven inventors.
+  </div>
+
+  <h2 class="section"><span class="num">I.</span>Three Claims, One Invention</h2>
+  <p class="prose">
+    The patent files the same automation pipeline three separate ways — as a system, as a method, and as a computer-readable medium. This is standard claim drafting: it lets an infringement theory reach whoever builds the system, whoever performs the steps, or whoever distributes the software, without needing three different inventions. All three independent claims recite the identical six-module chain; claims 19 and 20 are close mirrors of claim 1 restated in method and CRM form.
+  </p>
+
+  <div class="table-wrap">
+    <table>
+      <caption>Independent claims</caption>
+      <thead>
+        <tr><th class="claimno">Claim</th><th>Statutory class</th><th>What it recites</th></tr>
+      </thead>
+      <tbody>
+        <tr class="independent">
+          <td class="claimno"><span class="ref">1</span></td>
+          <td>System</td>
+          <td>A processor and memory hosting six operatively-coupled modules (<span class="ref">60</span>–<span class="ref">120</span>) within a processing subsystem <span class="ref">20</span></td>
+        </tr>
+        <tr class="independent">
+          <td class="claimno"><span class="ref">19</span></td>
+          <td>Method</td>
+          <td>The same six modules&rsquo; actions, restated as method steps (acquiring, parsing, allocating&hellip;deploying)</td>
+        </tr>
+        <tr class="independent">
+          <td class="claimno"><span class="ref">20</span></td>
+          <td>Computer-readable medium</td>
+          <td>A non-transitory medium storing a program that performs the claim&nbsp;19 method when executed</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 class="section"><span class="num">II.</span>The Automation Pipeline — Claim 1</h2>
+  <p class="prose">
+    Claim 1&rsquo;s six modules are claimed in a fixed sequence, each &ldquo;operatively coupled&rdquo; to the one before it. What matters legally is not just the module list but the trigger language binding three of the six couplings: storage migration <span class="ref">80</span> begins <em>upon</em> security details being applied by <span class="ref">70</span>; network configuration <span class="ref">90</span> begins <em>upon</em> storage being configured by <span class="ref">80</span>; data migration&rsquo;s dependency analysis begins <em>upon</em> secure communication being established by <span class="ref">90</span>. The other three couplings — data acquisition&nbsp;<span class="ref">60</span> to landing zone&nbsp;<span class="ref">70</span>, and data migration&nbsp;<span class="ref">100</span> through server&nbsp;<span class="ref">110</span> to application migration&nbsp;<span class="ref">120</span> — are claimed only as structural coupling, with no analogous &ldquo;upon&rdquo; clause.
+  </p>
+
+  <figure>
+    <div class="fig-wrap">
+      <svg viewBox="0 0 1120 270" role="img" aria-label="Block diagram of system 10, showing processing subsystem 20 hosted on server 30 over network 40, containing seven operatively-coupled modules 60 through 120, with integrated database 50 coupled to module 60.">
+        <defs>
+          <marker id="arrowSolid" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M0,0 L10,5 L0,10 z" fill="#2c5b82"></path>
+          </marker>
+          <marker id="arrowDash" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M0,0 L10,5 L0,10 z" fill="#4a5266"></path>
+          </marker>
+        </defs>
+        <g fill="none" stroke="#4a5266" stroke-width="1.2">
+          <rect x="10" y="10" width="1100" height="250" stroke-dasharray="4 4"></rect>
+        </g>
+        <text x="24" y="28" class="mono" font-size="11" fill="#4a5266" letter-spacing="1">SYSTEM <tspan fill="#2c5b82" font-weight="700">10</tspan></text>
+
+        <rect x="30" y="50" width="1060" height="176" fill="none" stroke="#1b2233" stroke-width="1.4"></rect>
+        <text x="46" y="70" font-size="12" font-weight="700" fill="#1b2233" letter-spacing="0.4">PROCESSING SUBSYSTEM <tspan class="mono" fill="#2c5b82">20</tspan></text>
+        <text x="46" y="86" font-size="10.5" fill="#4a5266" font-style="italic">hosted on server <tspan class="mono" fill="#2c5b82" font-style="normal">30</tspan> · executes over network <tspan class="mono" fill="#2c5b82" font-style="normal">40</tspan></text>
+
+        <!-- integrated database -->
+        <rect x="46" y="14" width="150" height="30" fill="#f8f9f2" stroke="#4a5266" stroke-width="1.2"></rect>
+        <text x="121" y="33" text-anchor="middle" font-size="11" fill="#1b2233">INTEGRATED DB <tspan class="mono" fill="#2c5b82" font-weight="700">50</tspan></text>
+        <line x1="121" y1="44" x2="99" y2="128" stroke="#4a5266" stroke-width="1.2" marker-end="url(#arrowDash)"></line>
+
+        <!-- module boxes: x positions 45,198,351,504,657,810,963 ; width 108 ; y 128 h 84 -->
+        <g font-size="10.5">
+          <!-- 60 -->
+          <rect x="45" y="128" width="108" height="84" fill="#fff" stroke="#2c5b82" stroke-width="1.4"></rect>
+          <text x="99" y="150" text-anchor="middle" class="mono" font-size="15" font-weight="700" fill="#2c5b82">60</text>
+          <text x="99" y="172" text-anchor="middle" fill="#1b2233">DATA</text>
+          <text x="99" y="186" text-anchor="middle" fill="#1b2233">ACQUISITION</text>
+
+          <!-- 70 -->
+          <rect x="198" y="128" width="108" height="84" fill="#fff" stroke="#2c5b82" stroke-width="1.4"></rect>
+          <text x="252" y="150" text-anchor="middle" class="mono" font-size="15" font-weight="700" fill="#2c5b82">70</text>
+          <text x="252" y="172" text-anchor="middle" fill="#1b2233">LANDING ZONE</text>
+          <text x="252" y="186" text-anchor="middle" fill="#1b2233">CREATION</text>
+
+          <!-- 80 -->
+          <rect x="351" y="128" width="108" height="84" fill="#fff" stroke="#2c5b82" stroke-width="1.4"></rect>
+          <text x="405" y="150" text-anchor="middle" class="mono" font-size="15" font-weight="700" fill="#2c5b82">80</text>
+          <text x="405" y="172" text-anchor="middle" fill="#1b2233">STORAGE</text>
+          <text x="405" y="186" text-anchor="middle" fill="#1b2233">MIGRATION</text>
+
+          <!-- 90 -->
+          <rect x="504" y="128" width="108" height="84" fill="#fff" stroke="#2c5b82" stroke-width="1.4"></rect>
+          <text x="558" y="150" text-anchor="middle" class="mono" font-size="15" font-weight="700" fill="#2c5b82">90</text>
+          <text x="558" y="172" text-anchor="middle" fill="#1b2233">NETWORK</text>
+          <text x="558" y="186" text-anchor="middle" fill="#1b2233">CONFIGURATION</text>
+
+          <!-- 100 -->
+          <rect x="657" y="128" width="108" height="84" fill="#fff" stroke="#2c5b82" stroke-width="1.4"></rect>
+          <text x="711" y="150" text-anchor="middle" class="mono" font-size="15" font-weight="700" fill="#2c5b82">100</text>
+          <text x="711" y="172" text-anchor="middle" fill="#1b2233">DATA</text>
+          <text x="711" y="186" text-anchor="middle" fill="#1b2233">MIGRATION</text>
+
+          <!-- 110 -->
+          <rect x="810" y="128" width="108" height="84" fill="#fff" stroke="#2c5b82" stroke-width="1.4"></rect>
+          <text x="864" y="150" text-anchor="middle" class="mono" font-size="15" font-weight="700" fill="#2c5b82">110</text>
+          <text x="864" y="172" text-anchor="middle" fill="#1b2233">SERVER</text>
+          <text x="864" y="186" text-anchor="middle" fill="#1b2233">MIGRATION</text>
+
+          <!-- 120 -->
+          <rect x="963" y="128" width="108" height="84" fill="#fff" stroke="#2c5b82" stroke-width="1.4"></rect>
+          <text x="1017" y="150" text-anchor="middle" class="mono" font-size="15" font-weight="700" fill="#2c5b82">120</text>
+          <text x="1017" y="172" text-anchor="middle" fill="#1b2233">APPLICATION</text>
+          <text x="1017" y="186" text-anchor="middle" fill="#1b2233">MIGRATION</text>
+        </g>
+
+        <!-- connectors, all at mid-height y=170 -->
+        <g stroke-width="1.4">
+          <line x1="153" y1="170" x2="197" y2="170" stroke="#4a5266" stroke-dasharray="4 3" marker-end="url(#arrowDash)"></line>
+          <line x1="306" y1="170" x2="350" y2="170" stroke="#2c5b82" marker-end="url(#arrowSolid)"></line>
+          <line x1="459" y1="170" x2="503" y2="170" stroke="#2c5b82" marker-end="url(#arrowSolid)"></line>
+          <line x1="612" y1="170" x2="656" y2="170" stroke="#2c5b82" marker-end="url(#arrowSolid)"></line>
+          <line x1="765" y1="170" x2="809" y2="170" stroke="#4a5266" stroke-dasharray="4 3" marker-end="url(#arrowDash)"></line>
+          <line x1="918" y1="170" x2="962" y2="170" stroke="#4a5266" stroke-dasharray="4 3" marker-end="url(#arrowDash)"></line>
+        </g>
+
+        <!-- trigger labels above the three solid arrows -->
+        <g font-size="9.5" fill="#2c5b82" font-style="italic" text-anchor="middle">
+          <text x="328" y="112">upon security applied</text>
+          <text x="481" y="112">upon storage configured</text>
+          <text x="634" y="112">upon secure comms</text>
+        </g>
+      </svg>
+    </div>
+    <figcaption>
+      <span class="fig-label">Fig. 1 —</span> Claim 1&rsquo;s module chain, redrawn with the patent&rsquo;s own reference numerals (system <span class="ref">10</span>, processing subsystem <span class="ref">20</span>, server <span class="ref">30</span>, network <span class="ref">40</span>, integrated database <span class="ref">50</span>, modules <span class="ref">60</span>–<span class="ref">120</span>).
+      <div class="legend">
+        <span><span class="swatch"></span> solid — explicit &ldquo;upon&hellip;&rdquo; trigger clause in claim&nbsp;1</span>
+        <span><span class="swatch dashed"></span> dashed — &ldquo;operatively coupled&rdquo; only, no stated trigger</span>
+      </div>
+    </figcaption>
+  </figure>
+
+  <h2 class="section"><span class="num">III.</span>Method 300 — The Same Chain as Seventeen Steps</h2>
+  <p class="prose">
+    Claims 19 and 20 restate Fig. 1&rsquo;s six modules as method <span class="ref">300</span>, a sequence of seventeen numbered steps (<span class="ref">310</span>–<span class="ref">470</span>) spread across the specification&rsquo;s Figs. 4a–4c. Collapsed onto one timeline, each module owns a short run of consecutive step numbers — one for data acquisition, three each for landing zone creation, data migration, server migration, and application migration, two each for storage and network configuration. Step <span class="ref">470</span>, deploying the applications, is the step the claim itself calls out as the point &ldquo;thereby automating the migration.&rdquo;
+  </p>
+
+  <figure>
+    <div class="fig-wrap">
+      <svg viewBox="0 0 1120 300" role="img" aria-label="Timeline of method 300's seventeen steps, 310 through 470, grouped under the same seven modules as Figure 1, ending with step 470 deploying applications.">
+        <text x="45" y="28" class="mono" font-size="12" font-weight="700" fill="#4a5266" letter-spacing="0.5">METHOD <tspan fill="#2c5b82">300</tspan></text>
+
+        <!-- columns: x 45,198,351,504,657,810,963 width 108 -->
+        <g font-size="10.5" text-anchor="middle">
+          <text x="99" y="52" fill="#1b2233" font-weight="700">DATA ACQ.</text>
+          <text x="252" y="52" fill="#1b2233" font-weight="700">LANDING ZONE</text>
+          <text x="405" y="52" fill="#1b2233" font-weight="700">STORAGE</text>
+          <text x="558" y="52" fill="#1b2233" font-weight="700">NETWORK</text>
+          <text x="711" y="52" fill="#1b2233" font-weight="700">DATA MIGR.</text>
+          <text x="864" y="52" fill="#1b2233" font-weight="700">SERVER</text>
+          <text x="1017" y="52" fill="#1b2233" font-weight="700">APPLICATION</text>
+        </g>
+
+        <!-- step chips: rect 100x26, gap 6, start y=64 -->
+        <g font-size="10">
+          <!-- col0: 310 -->
+          <rect x="49" y="64" width="100" height="26" fill="#fff" stroke="#2c5b82"></rect>
+          <text x="99" y="81" text-anchor="middle"><tspan class="mono" fill="#2c5b82" font-weight="700">310</tspan> <tspan fill="#1b2233">acquiring</tspan></text>
+
+          <!-- col1: 320,330,340 -->
+          <rect x="202" y="64" width="100" height="26" fill="#fff" stroke="#2c5b82"></rect>
+          <text x="252" y="81" text-anchor="middle"><tspan class="mono" fill="#2c5b82" font-weight="700">320</tspan> <tspan fill="#1b2233">parsing</tspan></text>
+          <rect x="202" y="96" width="100" height="26" fill="#fff" stroke="#2c5b82"></rect>
+          <text x="252" y="113" text-anchor="middle"><tspan class="mono" fill="#2c5b82" font-weight="700">330</tspan> <tspan fill="#1b2233">allocating</tspan></text>
+          <rect x="202" y="128" width="100" height="26" fill="#fff" stroke="#2c5b82"></rect>
+          <text x="252" y="145" text-anchor="middle"><tspan class="mono" fill="#2c5b82" font-weight="700">340</tspan> <tspan fill="#1b2233">applying</tspan></text>
+
+          <!-- col2: 350,360 -->
+          <rect x="355" y="64" width="100" height="26" fill="#fff" stroke="#2c5b82"></rect>
+          <text x="405" y="81" text-anchor="middle"><tspan class="mono" fill="#2c5b82" font-weight="700">350</tspan> <tspan fill="#1b2233">analyzing</tspan></text>
+          <rect x="355" y="96" width="100" height="26" fill="#fff" stroke="#2c5b82"></rect>
+          <text x="405" y="113" text-anchor="middle"><tspan class="mono" fill="#2c5b82" font-weight="700">360</tspan> <tspan fill="#1b2233">configuring</tspan></text>
+
+          <!-- col3: 370,380 -->
+          <rect x="508" y="64" width="100" height="26" fill="#fff" stroke="#2c5b82"></rect>
+          <text x="558" y="81" text-anchor="middle"><tspan class="mono" fill="#2c5b82" font-weight="700">370</tspan> <tspan fill="#1b2233">mapping</tspan></text>
+          <rect x="508" y="96" width="100" height="26" fill="#fff" stroke="#2c5b82"></rect>
+          <text x="558" y="113" text-anchor="middle"><tspan class="mono" fill="#2c5b82" font-weight="700">380</tspan> <tspan fill="#1b2233">establishing</tspan></text>
+
+          <!-- col4: 390,400,410 -->
+          <rect x="661" y="64" width="100" height="26" fill="#fff" stroke="#2c5b82"></rect>
+          <text x="711" y="81" text-anchor="middle"><tspan class="mono" fill="#2c5b82" font-weight="700">390</tspan> <tspan fill="#1b2233">analyzing</tspan></text>
+          <rect x="661" y="96" width="100" height="26" fill="#fff" stroke="#2c5b82"></rect>
+          <text x="711" y="113" text-anchor="middle"><tspan class="mono" fill="#2c5b82" font-weight="700">400</tspan> <tspan fill="#1b2233">generating</tspan></text>
+          <rect x="661" y="128" width="100" height="26" fill="#fff" stroke="#2c5b82"></rect>
+          <text x="711" y="145" text-anchor="middle"><tspan class="mono" fill="#2c5b82" font-weight="700">410</tspan> <tspan fill="#1b2233">transferring</tspan></text>
+
+          <!-- col5: 420,430,440 -->
+          <rect x="814" y="64" width="100" height="26" fill="#fff" stroke="#2c5b82"></rect>
+          <text x="864" y="81" text-anchor="middle"><tspan class="mono" fill="#2c5b82" font-weight="700">420</tspan> <tspan fill="#1b2233">identifying</tspan></text>
+          <rect x="814" y="96" width="100" height="26" fill="#fff" stroke="#2c5b82"></rect>
+          <text x="864" y="113" text-anchor="middle"><tspan class="mono" fill="#2c5b82" font-weight="700">430</tspan> <tspan fill="#1b2233">creating</tspan></text>
+          <rect x="814" y="128" width="100" height="26" fill="#fff" stroke="#2c5b82"></rect>
+          <text x="864" y="145" text-anchor="middle"><tspan class="mono" fill="#2c5b82" font-weight="700">440</tspan> <tspan fill="#1b2233">migrating</tspan></text>
+
+          <!-- col6: 450,460,470 -->
+          <rect x="967" y="64" width="100" height="26" fill="#fff" stroke="#2c5b82"></rect>
+          <text x="1017" y="81" text-anchor="middle"><tspan class="mono" fill="#2c5b82" font-weight="700">450</tspan> <tspan fill="#1b2233">identifying</tspan></text>
+          <rect x="967" y="96" width="100" height="26" fill="#fff" stroke="#2c5b82"></rect>
+          <text x="1017" y="113" text-anchor="middle"><tspan class="mono" fill="#2c5b82" font-weight="700">460</tspan> <tspan fill="#1b2233">generating</tspan></text>
+          <rect x="967" y="128" width="100" height="26" fill="#efe6d3" stroke="#8f6a2e" stroke-width="1.6"></rect>
+          <text x="1017" y="145" text-anchor="middle"><tspan class="mono" fill="#8f6a2e" font-weight="700">470</tspan> <tspan fill="#1b2233">deploying</tspan></text>
+        </g>
+
+        <!-- bottom flow arrow -->
+        <line x1="45" y1="185" x2="1075" y2="185" stroke="#4a5266" stroke-width="1.3" marker-end="url(#arrowDash2)"></line>
+        <defs>
+          <marker id="arrowDash2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M0,0 L10,5 L0,10 z" fill="#4a5266"></path>
+          </marker>
+        </defs>
+        <text x="1017" y="205" text-anchor="middle" font-size="10.5" fill="#8f6a2e" font-style="italic">&ldquo;thereby automating the migration&rdquo;</text>
+      </svg>
+    </div>
+    <figcaption>
+      <span class="fig-label">Fig. 2 —</span> Method <span class="ref">300</span>&rsquo;s seventeen steps, grouped by the module that performs each one. Step <span class="ref">470</span> (highlighted) is the closing limitation shared verbatim by claims 1, 19, and 20.
+    </figcaption>
+  </figure>
+
+  <h2 class="section"><span class="num">IV.</span>Dependent Claims — Scope Narrowing</h2>
+  <p class="prose">
+    Claims 2 through 18 all depend on claim 1 and narrow it along independent axes — cloud deployment model, resource type, requirement categories, networking primitives, and, notably, the database technology behind the &ldquo;integrated database <span class="ref">50</span>.&rdquo; That last group is deliberate: claiming SQL, NoSQL, <em>and</em> sequential/columnar variants keeps the claim from being read narrowly around one storage technology.
+  </p>
+
+  <div class="table-wrap">
+    <table>
+      <caption>Dependent claims 2–18, grouped by what they narrow</caption>
+      <thead>
+        <tr><th class="claimno">Claims</th><th>Axis narrowed</th><th>Recites</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="claimno"><span class="ref">2</span></td><td>Cloud deployment model</td><td>private, public, and hybrid cloud</td></tr>
+        <tr><td class="claimno"><span class="ref">3</span></td><td>Resource types</td><td>applications, second servers, and data</td></tr>
+        <tr><td class="claimno"><span class="ref">4</span></td><td>Landing zone requirements</td><td>app dependencies, performance, security, compliance, scalability, network architecture, identity, access management, monitoring, logging, documentation, compliance reporting</td></tr>
+        <tr><td class="claimno"><span class="ref">5</span></td><td>Cloud requirements</td><td>scalability, security, compliance, availability, disaster recovery, performance optimization, data consistency/sync, network connectivity, provisioning automation, data mapping, dependency analysis, deployment automation, testing, documentation, compliance reporting</td></tr>
+        <tr><td class="claimno"><span class="ref">6</span></td><td>Infrastructure requirements</td><td>VMs, storage, networking, scalability, compliance/security, data migration, region/availability zones, allocation policies, documentation, monitoring, logging</td></tr>
+        <tr><td class="claimno"><span class="ref">7</span></td><td>Networking resources</td><td>VPC, subnet, load balancer, firewall, VPN, direct connect, route tables, security groups, DNS, CDN, public IPs, private link, gateway services, monitoring, logging</td></tr>
+        <tr><td class="claimno"><span class="ref">8</span></td><td>Storage parameters</td><td>storage type, performance requirements, data access patterns</td></tr>
+        <tr><td class="claimno"><span class="ref">9</span></td><td>Execution model</td><td>the plurality of modules execute <strong>in parallel</strong></td></tr>
+        <tr><td class="claimno"><span class="ref">10</span>–<span class="ref">11</span></td><td>First server location</td><td>cloud-based server, <em>or</em> local server</td></tr>
+        <tr><td class="claimno"><span class="ref">12</span>–<span class="ref">15</span></td><td>First network type</td><td>LAN, WAN, wired, wireless</td></tr>
+        <tr><td class="claimno"><span class="ref">16</span>–<span class="ref">18</span></td><td>Integrated database <span class="ref">50</span> type</td><td>SQL database, non-SQL (NoSQL) database, <em>or</em> sequential/columnar database</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout">
+    <span class="label">Note on scope</span>
+    Claims 10–18 read as breadth insurance rather than technical distinctions — they don&rsquo;t change what the system does, only where it runs and what it&rsquo;s backed by. Their value is defensive: a design-around that swaps SQL for NoSQL, or a local server for a cloud-hosted one, still falls inside claims 16–18 or 10–11 respectively, so it doesn&rsquo;t avoid the patent by that move alone.
+  </div>
+
+  <p class="navback"><a href="../">← back to index</a> · <a href="us12204505-claim-map.html">companion patent: US 12,204,505</a></p>
+
+  <footer>
+    <p>Reading notes on U.S. Patent No. 12,124,869 B1, assigned to Onix Networking Corp. Claim text and reference numerals transcribed from the granted patent (cols. 5–12 for the module descriptions, cols. 13–16 for method 300, cols. 18–22 for the claims). Not a legal opinion; verify against the official record at <a href="https://patents.google.com/patent/US12124869" target="_blank" rel="noopener">patents.google.com/patent/US12124869</a> or the USPTO.</p>
+    <span class="stamp">Patent reading notes</span>
+  </footer>
+
+</main>
+</body>
+</html>

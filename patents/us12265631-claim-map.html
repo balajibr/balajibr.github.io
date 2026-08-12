@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Claim Map — US 12,265,631 B1</title>
+<style>
+  :root {
+    --paper: #eef0e8;
+    --paper-raised: #f8f9f2;
+    --ink: #1b2233;
+    --ink-soft: #4a5266;
+    --rule: #c3c0ac;
+    --rule-soft: #d8d5c4;
+    --blueprint: #2c5b82;
+    --blueprint-wash: #dde7ee;
+    --brass: #8f6a2e;
+    --brass-wash: #efe6d3;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--paper);
+    color: var(--ink);
+  }
+
+  body {
+    font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif;
+    font-size: 16px;
+    line-height: 1.55;
+  }
+
+  .mono {
+    font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .ref {
+    font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+    color: var(--blueprint);
+    font-weight: 700;
+  }
+
+  .masthead {
+    border-bottom: 1px solid var(--ink);
+    padding: 10px 0 6px;
+  }
+  .masthead-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+    flex-wrap: wrap;
+    padding: 0 24px;
+    font-size: 12px;
+    letter-spacing: 0.06em;
+  }
+  .masthead .mono { color: var(--ink-soft); }
+  .masthead .kind { color: var(--brass); font-weight: 700; }
+
+  main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 24px 80px;
+  }
+
+  .titleblock {
+    text-align: center;
+    padding: 40px 0 28px;
+    border-bottom: 3px double var(--ink);
+    margin-bottom: 30px;
+  }
+  .eyebrow {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--brass);
+    margin: 0 0 14px;
+  }
+  h1.title {
+    font-size: 26px;
+    line-height: 1.28;
+    letter-spacing: 0.01em;
+    margin: 0 0 10px;
+    text-transform: uppercase;
+    text-wrap: balance;
+    font-weight: 700;
+  }
+  .subtitle {
+    font-size: 15px;
+    color: var(--ink-soft);
+    font-style: italic;
+    margin: 0;
+  }
+
+  .biblio {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 13.5px;
+    margin: 26px 0 34px;
+    padding: 16px 20px;
+    background: var(--paper-raised);
+    border: 1px solid var(--rule);
+  }
+  .biblio-row {
+    display: grid;
+    grid-template-columns: 130px 1fr;
+    gap: 16px;
+    align-items: baseline;
+  }
+  .biblio dt {
+    color: var(--ink-soft);
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+  }
+  .biblio dd { margin: 0; }
+  .me {
+    background: var(--brass-wash);
+    box-shadow: 0 0 0 2px var(--brass-wash);
+    color: var(--ink);
+    font-weight: 700;
+  }
+
+  .verbatim {
+    border-left: 3px solid var(--blueprint);
+    background: var(--paper-raised);
+    padding: 16px 20px;
+    margin: 24px 0;
+    font-size: 14.5px;
+  }
+  .verbatim .label {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--blueprint);
+    display: block;
+    margin-bottom: 6px;
+  }
+  .verbatim p { margin: 0 0 8px; }
+  .verbatim p:last-child { margin-bottom: 0; }
+
+  h2.section {
+    text-align: center;
+    font-size: 15px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin: 52px 0 22px;
+    font-weight: 700;
+  }
+  h2.section .num {
+    color: var(--brass);
+    margin-right: 8px;
+  }
+
+  p { margin: 0 0 14px; }
+
+  .prose {
+    column-count: 2;
+    column-gap: 2.4rem;
+    font-size: 14.5px;
+  }
+  @media (max-width: 640px) {
+    .prose { column-count: 1; }
+  }
+
+  .table-wrap {
+    overflow-x: auto;
+    margin: 18px 0 26px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13.5px;
+  }
+  caption {
+    text-align: left;
+    font-size: 11px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin-bottom: 8px;
+    caption-side: top;
+  }
+  th {
+    text-align: left;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    border-bottom: 1px solid var(--ink);
+    padding: 8px 10px;
+    font-weight: 700;
+  }
+  td {
+    padding: 9px 10px;
+    border-bottom: 1px solid var(--rule-soft);
+    vertical-align: top;
+  }
+  tr:last-child td { border-bottom: 1px solid var(--ink); }
+  td.claimno, th.claimno { white-space: nowrap; width: 1%; }
+  td.claimno .ref { font-size: 13px; }
+  tr.independent td { background: var(--blueprint-wash); }
+
+  figure { margin: 30px 0 34px; }
+  .fig-wrap {
+    overflow-x: auto;
+    background: var(--paper-raised);
+    border: 1px solid var(--rule);
+    padding: 12px 4px;
+  }
+  figure svg { display: block; min-width: 760px; margin: 0 auto; }
+  figcaption {
+    font-size: 13px;
+    color: var(--ink-soft);
+    margin-top: 10px;
+    line-height: 1.5;
+  }
+  figcaption .fig-label {
+    font-weight: 700;
+    color: var(--ink);
+    font-style: normal;
+  }
+  figcaption em { color: var(--blueprint); font-style: italic; }
+
+  .callout {
+    border: 1px solid var(--brass);
+    background: var(--brass-wash);
+    padding: 14px 18px;
+    font-size: 13.5px;
+    margin: 22px 0;
+  }
+  .callout .label {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--brass);
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 700;
+  }
+
+  .navback {
+    font-size: 12px;
+    margin: 22px 0 0;
+  }
+  .navback a { color: var(--blueprint); text-decoration: none; border-bottom: 1px solid var(--blueprint-wash); }
+  .navback a:hover { border-bottom-color: var(--blueprint); }
+
+  footer {
+    margin-top: 60px;
+    padding-top: 18px;
+    border-top: 3px double var(--ink);
+    font-size: 12px;
+    color: var(--ink-soft);
+    text-align: center;
+  }
+  footer a { color: var(--blueprint); text-decoration: none; border-bottom: 1px solid var(--blueprint-wash); }
+  footer a:hover { border-bottom-color: var(--blueprint); }
+  footer .stamp {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 4px 12px;
+    border: 1px solid var(--brass);
+    color: var(--brass);
+    letter-spacing: 0.1em;
+    font-size: 10.5px;
+    text-transform: uppercase;
+  }
+</style>
+</head>
+<body>
+
+<div class="masthead">
+  <div class="masthead-inner">
+    <span class="mono">US 12,265,631 B1</span>
+    <span class="kind">CLAIM MAP — READING NOTES</span>
+    <span class="mono">Granted April 1, 2025</span>
+  </div>
+</div>
+
+<main>
+
+  <div class="titleblock">
+    <p class="eyebrow">United States Patent · Utility · Kind Code B1</p>
+    <h1 class="title">System and Method to Analyze<br />Security Across Digital Environments</h1>
+    <p class="subtitle">An annotated claim map of U.S. Patent No. 12,265,631 B1, built from the granted patent text</p>
+  </div>
+
+  <dl class="biblio">
+    <div class="biblio-row"><dt>Patent No.</dt><dd class="mono">US 12,265,631 B1</dd></div>
+    <div class="biblio-row"><dt>Filed</dt><dd class="mono">November 8, 2024</dd></div>
+    <div class="biblio-row"><dt>Granted</dt><dd class="mono">April 1, 2025</dd></div>
+    <div class="biblio-row"><dt>Assignee</dt><dd>Onix Networking Corp.</dd></div>
+    <div class="biblio-row"><dt>Inventors</dt><dd>Ramnish Singh · Gaurav Aggarwal · Anantha Balasubramanian · <span class="me">Balaji Ramakrishnan</span> · Rajesh Kannan</dd></div>
+    <div class="biblio-row"><dt>Claims</dt><dd>12 total — 3 independent (<span class="ref">1</span> system, <span class="ref">11</span> method, <span class="ref">12</span> CRM)</dd></div>
+  </dl>
+
+  <div class="callout">
+    <span class="label">Why this was filed</span>
+    Scanners were never the bottleneck. An enterprise could already scan its applications, operating systems, container images, and network and drown in findings from four different tools that did not talk to each other. What nobody automated was the judgment after the scan: reconciling those four report streams into one non-duplicated view, and then deciding what would actually happen <em>if you applied the fix</em> — because in production the remediation itself carries risk. Onix built a system that scores the consequence of remediating, not just the severity of the vulnerability, and lets that score gate whether the fix runs automatically. That gate is what this patent claims.
+  </div>
+
+  <h2 class="section"><span class="num">I.</span>Three Modules and a Threshold</h2>
+  <p class="prose">
+    Claim 1 is compact for a system claim — three modules, not six. The report generation module <span class="ref">110</span> produces four named scan reports across the software delivery pipeline. The recommendation engine <span class="ref">112</span> carries five distinct configured behaviors, and is where nearly all the claimed intelligence sits: analyze, verify against the CVE database <span class="ref">120</span>, run an impact analysis with a machine learning model, generate a score matrix against a predefined threshold, and issue recommendations. The vulnerability remediation module <span class="ref">114</span> then does one thing — use those threshold limits to initiate automated remediation. The claim&rsquo;s weight rests on what the threshold is computed from.
+  </p>
+
+  <figure>
+    <div class="fig-wrap">
+      <svg viewBox="0 0 1120 330" role="img" aria-label="Block diagram of system 100: four vulnerability scan reports 202 through 208 feed report generation module 110, then recommendation engine 112 which cross-references CVE database 120 and runs machine-learning impact analysis to produce a score matrix, then vulnerability remediation module 114 gated by a predefined threshold.">
+        <defs>
+          <marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M0,0 L10,5 L0,10 z" fill="#2c5b82"></path>
+          </marker>
+          <marker id="arS" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M0,0 L10,5 L0,10 z" fill="#4a5266"></path>
+          </marker>
+          <marker id="arB" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M0,0 L10,5 L0,10 z" fill="#8f6a2e"></path>
+          </marker>
+        </defs>
+
+        <text x="24" y="26" class="mono" font-size="11" fill="#4a5266" letter-spacing="1">SYSTEM <tspan fill="#2c5b82" font-weight="700">100</tspan></text>
+
+        <!-- four scan reports -->
+        <g font-size="9.5" fill="#1b2233">
+          <rect x="24" y="60" width="170" height="26" fill="#fff" stroke="#4a5266" stroke-width="1"></rect>
+          <text x="109" y="72" text-anchor="middle">application vuln scan</text>
+          <text x="109" y="82" text-anchor="middle" class="mono" fill="#2c5b82" font-weight="700">202</text>
+
+          <rect x="24" y="92" width="170" height="26" fill="#fff" stroke="#4a5266" stroke-width="1"></rect>
+          <text x="109" y="104" text-anchor="middle">OS vuln scan</text>
+          <text x="109" y="114" text-anchor="middle" class="mono" fill="#2c5b82" font-weight="700">204</text>
+
+          <rect x="24" y="124" width="170" height="26" fill="#fff" stroke="#4a5266" stroke-width="1"></rect>
+          <text x="109" y="136" text-anchor="middle">container image vuln</text>
+          <text x="109" y="146" text-anchor="middle" class="mono" fill="#2c5b82" font-weight="700">206</text>
+
+          <rect x="24" y="156" width="170" height="26" fill="#fff" stroke="#4a5266" stroke-width="1"></rect>
+          <text x="109" y="168" text-anchor="middle">network vuln</text>
+          <text x="109" y="178" text-anchor="middle" class="mono" fill="#2c5b82" font-weight="700">208</text>
+        </g>
+        <text x="109" y="200" text-anchor="middle" font-size="9.5" fill="#4a5266" font-style="italic">software delivery pipeline</text>
+
+        <line x1="196" y1="121" x2="232" y2="121" stroke="#4a5266" stroke-width="1.4" marker-end="url(#arS)"></line>
+
+        <!-- module 110 -->
+        <rect x="234" y="84" width="150" height="76" fill="#fff" stroke="#2c5b82" stroke-width="1.4"></rect>
+        <text x="309" y="106" text-anchor="middle" class="mono" font-size="15" font-weight="700" fill="#2c5b82">110</text>
+        <text x="309" y="126" text-anchor="middle" font-size="10.5" fill="#1b2233">REPORT GENERATION</text>
+        <text x="309" y="140" text-anchor="middle" font-size="10.5" fill="#1b2233">MODULE</text>
+        <text x="309" y="176" text-anchor="middle" font-size="9.5" fill="#4a5266" font-style="italic">categorizes by impact level</text>
+
+        <line x1="384" y1="121" x2="428" y2="121" stroke="#2c5b82" stroke-width="1.4" marker-end="url(#ar)"></line>
+
+        <!-- module 112 - the big one -->
+        <rect x="430" y="60" width="300" height="124" fill="#fff" stroke="#2c5b82" stroke-width="1.8"></rect>
+        <text x="580" y="82" text-anchor="middle" class="mono" font-size="15" font-weight="700" fill="#2c5b82">112</text>
+        <text x="580" y="99" text-anchor="middle" font-size="10.5" fill="#1b2233" font-weight="700">RECOMMENDATION ENGINE</text>
+        <g font-size="9.5" fill="#1b2233">
+          <text x="446" y="118">1 · comprehensive analysis of reports</text>
+          <text x="446" y="132">2 · verify by cross-referencing CVE</text>
+          <text x="446" y="146">3 · ML impact analysis — consequence of fixing</text>
+          <text x="446" y="160">4 · generate score matrix vs. threshold</text>
+          <text x="446" y="174">5 · provide recommendations</text>
+        </g>
+
+        <!-- CVE database -->
+        <rect x="505" y="16" width="150" height="30" fill="#f8f9f2" stroke="#4a5266" stroke-width="1.2"></rect>
+        <text x="580" y="35" text-anchor="middle" font-size="10.5" fill="#1b2233">CVE DATABASE <tspan class="mono" fill="#2c5b82" font-weight="700">120</tspan></text>
+        <line x1="580" y1="46" x2="580" y2="59" stroke="#4a5266" stroke-width="1.2" marker-end="url(#arS)"></line>
+
+        <line x1="730" y1="121" x2="774" y2="121" stroke="#2c5b82" stroke-width="1.4" marker-end="url(#ar)"></line>
+
+        <!-- score matrix gate -->
+        <rect x="776" y="84" width="140" height="76" fill="#efe6d3" stroke="#8f6a2e" stroke-width="1.6"></rect>
+        <text x="846" y="108" text-anchor="middle" font-size="10.5" fill="#1b2233" font-weight="700">SCORE MATRIX</text>
+        <text x="846" y="126" text-anchor="middle" font-size="9.5" fill="#1b2233">predefined</text>
+        <text x="846" y="139" text-anchor="middle" font-size="9.5" fill="#1b2233">threshold limit</text>
+        <text x="846" y="176" text-anchor="middle" font-size="9.5" fill="#8f6a2e" font-style="italic">acts as the trigger</text>
+
+        <line x1="916" y1="121" x2="960" y2="121" stroke="#8f6a2e" stroke-width="1.6" marker-end="url(#arB)"></line>
+
+        <!-- module 114 -->
+        <rect x="962" y="84" width="140" height="76" fill="#fff" stroke="#2c5b82" stroke-width="1.4"></rect>
+        <text x="1032" y="106" text-anchor="middle" class="mono" font-size="15" font-weight="700" fill="#2c5b82">114</text>
+        <text x="1032" y="126" text-anchor="middle" font-size="10.5" fill="#1b2233">VULNERABILITY</text>
+        <text x="1032" y="140" text-anchor="middle" font-size="10.5" fill="#1b2233">REMEDIATION</text>
+        <text x="1032" y="176" text-anchor="middle" font-size="9.5" fill="#4a5266" font-style="italic">automated fix</text>
+
+        <!-- the distinguishing annotation -->
+        <rect x="430" y="228" width="672" height="52" fill="#efe6d3" stroke="#8f6a2e" stroke-width="1.2"></rect>
+        <text x="766" y="248" text-anchor="middle" font-size="10.5" fill="#8f6a2e" font-weight="700">THE UNUSUAL LIMITATION</text>
+        <text x="766" y="266" text-anchor="middle" font-size="10" fill="#1b2233">the ML model predicts the consequence of <tspan font-style="italic">fixing</tspan> the vulnerability — not the severity of having it</text>
+        <line x1="580" y1="185" x2="580" y2="226" stroke="#8f6a2e" stroke-width="1.4" stroke-dasharray="4 3" marker-end="url(#arB)"></line>
+      </svg>
+    </div>
+    <figcaption>
+      <span class="fig-label">Fig. 1 —</span> Claim 1&rsquo;s three modules with the patent&rsquo;s own reference numerals. Four scan streams reconcile into one view at <span class="ref">110</span>, the recommendation engine <span class="ref">112</span> carries five configured behaviors, and the score matrix threshold — not a human ticket — is what releases the automated remediation at <span class="ref">114</span>.
+    </figcaption>
+  </figure>
+
+  <h2 class="section"><span class="num">II.</span>Method 400 — Eight Steps</h2>
+  <p class="prose">
+    Claims 11 and 12 restate the system as method <span class="ref">400</span>, steps <span class="ref">402</span>–<span class="ref">416</span>. Five of the eight belong to the recommendation engine. The order matters and is claimed: verification against the CVE database (<span class="ref">408</span>) comes <em>before</em> the impact analysis (<span class="ref">410</span>), so that false positives and duplicates are removed before the machine learning model spends its judgment on them, and the score matrix (<span class="ref">412</span>) is generated from that analysis rather than from raw scanner severity.
+  </p>
+
+  <figure>
+    <div class="fig-wrap">
+      <svg viewBox="0 0 1120 200" role="img" aria-label="Timeline of method 400's eight steps 402 through 416 grouped by module: report generation performs two, recommendation engine performs five, vulnerability remediation performs the final step.">
+        <text x="30" y="26" class="mono" font-size="12" font-weight="700" fill="#4a5266" letter-spacing="0.5">METHOD <tspan fill="#2c5b82">400</tspan></text>
+
+        <g font-size="10" text-anchor="middle" fill="#1b2233" font-weight="700">
+          <text x="150" y="50">REPORT GENERATION</text>
+          <text x="600" y="50">RECOMMENDATION ENGINE</text>
+          <text x="1010" y="50">REMEDIATION</text>
+        </g>
+
+        <g font-size="9.5">
+          <rect x="30" y="62" width="118" height="28" fill="#fff" stroke="#2c5b82"></rect>
+          <text x="89" y="80" text-anchor="middle"><tspan class="mono" fill="#2c5b82" font-weight="700">402</tspan> <tspan fill="#1b2233">generating</tspan></text>
+          <rect x="154" y="62" width="118" height="28" fill="#fff" stroke="#2c5b82"></rect>
+          <text x="213" y="80" text-anchor="middle"><tspan class="mono" fill="#2c5b82" font-weight="700">404</tspan> <tspan fill="#1b2233">categorizing</tspan></text>
+
+          <rect x="300" y="62" width="118" height="28" fill="#fff" stroke="#2c5b82"></rect>
+          <text x="359" y="80" text-anchor="middle"><tspan class="mono" fill="#2c5b82" font-weight="700">406</tspan> <tspan fill="#1b2233">analyzing</tspan></text>
+          <rect x="424" y="62" width="118" height="28" fill="#fff" stroke="#2c5b82"></rect>
+          <text x="483" y="80" text-anchor="middle"><tspan class="mono" fill="#2c5b82" font-weight="700">408</tspan> <tspan fill="#1b2233">verifying</tspan></text>
+          <rect x="548" y="62" width="118" height="28" fill="#efe6d3" stroke="#8f6a2e" stroke-width="1.4"></rect>
+          <text x="607" y="80" text-anchor="middle"><tspan class="mono" fill="#8f6a2e" font-weight="700">410</tspan> <tspan fill="#1b2233">impact analysis</tspan></text>
+          <rect x="672" y="62" width="118" height="28" fill="#efe6d3" stroke="#8f6a2e" stroke-width="1.4"></rect>
+          <text x="731" y="80" text-anchor="middle"><tspan class="mono" fill="#8f6a2e" font-weight="700">412</tspan> <tspan fill="#1b2233">score matrix</tspan></text>
+          <rect x="796" y="62" width="118" height="28" fill="#fff" stroke="#2c5b82"></rect>
+          <text x="855" y="80" text-anchor="middle"><tspan class="mono" fill="#2c5b82" font-weight="700">414</tspan> <tspan fill="#1b2233">recommending</tspan></text>
+
+          <rect x="952" y="62" width="138" height="28" fill="#fff" stroke="#2c5b82"></rect>
+          <text x="1021" y="80" text-anchor="middle"><tspan class="mono" fill="#2c5b82" font-weight="700">416</tspan> <tspan fill="#1b2233">auto-remediating</tspan></text>
+        </g>
+
+        <defs>
+          <marker id="arT" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M0,0 L10,5 L0,10 z" fill="#4a5266"></path>
+          </marker>
+        </defs>
+        <line x1="30" y1="112" x2="1090" y2="112" stroke="#4a5266" stroke-width="1.3" marker-end="url(#arT)"></line>
+
+        <text x="483" y="140" text-anchor="middle" font-size="10" fill="#4a5266" font-style="italic">de-duplicate first…</text>
+        <text x="669" y="140" text-anchor="middle" font-size="10" fill="#8f6a2e" font-style="italic">…then spend model judgment on what survives</text>
+      </svg>
+    </div>
+    <figcaption>
+      <span class="fig-label">Fig. 2 —</span> Method <span class="ref">400</span>&rsquo;s eight steps. The two brass steps are the claimed novelty: an ML impact analysis of the remediation, and a score matrix built from it.
+    </figcaption>
+  </figure>
+
+  <h2 class="section"><span class="num">III.</span>Claims at a Glance</h2>
+
+  <div class="table-wrap">
+    <table>
+      <caption>Independent claims</caption>
+      <thead>
+        <tr><th class="claimno">Claim</th><th>Statutory class</th><th>What it recites</th></tr>
+      </thead>
+      <tbody>
+        <tr class="independent">
+          <td class="claimno"><span class="ref">1</span></td>
+          <td>System</td>
+          <td>Hardware processor and memory hosting three modules — report generation <span class="ref">110</span>, recommendation engine <span class="ref">112</span> with five configured behaviors, vulnerability remediation <span class="ref">114</span></td>
+        </tr>
+        <tr class="independent">
+          <td class="claimno"><span class="ref">11</span></td>
+          <td>Method</td>
+          <td>The same chain as eight steps: generating, categorizing, analyzing, verifying, conducting impact analysis, generating score matrix, providing recommendations, utilizing thresholds</td>
+        </tr>
+        <tr class="independent">
+          <td class="claimno"><span class="ref">12</span></td>
+          <td>Computer-readable medium</td>
+          <td>A non-transitory medium storing a program that performs the claim&nbsp;11 method</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="table-wrap">
+    <table>
+      <caption>Dependent claims 2–10, all depending on claim 1</caption>
+      <thead>
+        <tr><th class="claimno">Claim</th><th>Narrows</th><th>Recites</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="claimno"><span class="ref">2</span></td><td>Report categorization</td><td>categorizing the reports by multiple levels of impact (high, medium, low)</td></tr>
+        <tr><td class="claimno"><span class="ref">3</span></td><td>Model behavior</td><td>the ML model enables continuous learning and adaptation, keeping the system current with latest vulnerability and remediation techniques</td></tr>
+        <tr><td class="claimno"><span class="ref">4</span></td><td>Score matrix purpose</td><td>the matrix enables informed decision-making on which vulnerabilities are resolved</td></tr>
+        <tr><td class="claimno"><span class="ref">5</span></td><td>Scanned components</td><td>operating system, applications, containers, databases and network</td></tr>
+        <tr><td class="claimno"><span class="ref">6</span></td><td>Verification source</td><td>reports verified against a cyber security framework <span class="ref">116</span>, in addition to the CVE database</td></tr>
+        <tr><td class="claimno"><span class="ref">7</span></td><td>Threshold role</td><td>the predefined threshold limits act as triggers to activate the system</td></tr>
+        <tr><td class="claimno"><span class="ref">8</span></td><td>Model output</td><td>the ML model recommends which of the identified vulnerabilities are to be fixed</td></tr>
+        <tr><td class="claimno"><span class="ref">9</span></td><td>CVE freshness</td><td>the CVE database is updated with latest vulnerabilities at regular intervals</td></tr>
+        <tr><td class="claimno"><span class="ref">10</span></td><td>Matrix semantics</td><td>the score matrix defines a priority for implementation</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 class="section"><span class="num">IV.</span>How This Differs From Existing Tools</h2>
+  <p class="prose">
+    Vulnerability management is a mature market, and risk-based prioritization is its standard feature — Tenable&rsquo;s VPR, Qualys TruRisk, Rapid7 Active Risk, and Wiz&rsquo;s attack-path analysis all rank findings by exploitability, asset criticality, and threat intelligence rather than raw CVSS. All of that scores the same object: how dangerous it is to <em>have</em> the vulnerability. The claimed system scores a different object. Its machine learning model conducts an impact analysis to &ldquo;determine the consequence of fixing&rdquo; the vulnerability — the side effects and unintended consequences of the remediation itself — and the resulting matrix is what gates automatic action.
+  </p>
+
+  <div class="table-wrap">
+    <table>
+      <caption>Tool landscape versus the claimed chain</caption>
+      <thead>
+        <tr><th>Category and representative tools</th><th>What it does</th><th>Where the claimed chain goes further</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Risk-based vulnerability management — Tenable VPR, Qualys TruRisk, Rapid7 Active Risk</td>
+          <td>Ranks findings by exploitability, asset criticality, KEV/EPSS signals</td>
+          <td>Scores the risk of the vulnerability; the claim scores the predicted consequence of applying the fix</td>
+        </tr>
+        <tr>
+          <td>Cloud-native security — Wiz, Prisma Cloud, Orca</td>
+          <td>Attack-path analysis across cloud workloads, containers, CI/CD</td>
+          <td>Strong on cloud posture, but does not reconcile OS and traditional network scan streams into the same rationalized view</td>
+        </tr>
+        <tr>
+          <td>Developer-first scanning — Snyk, Dependabot</td>
+          <td>Dependency, container and IaC scanning with automated fix pull requests</td>
+          <td>Automates the fix, but gates it on tests and human review rather than a predicted-impact score matrix</td>
+        </tr>
+        <tr>
+          <td>Security orchestration — Splunk SOAR, Torq, Tines</td>
+          <td>Executes remediation playbooks automatically when conditions match</td>
+          <td>Conditions are author-written rules; here the trigger threshold is computed by the ML model from the impact analysis</td>
+        </tr>
+        <tr>
+          <td>Aggregation layers — ASPM and vulnerability aggregation platforms</td>
+          <td>Normalizes findings from multiple scanners and de-duplicates</td>
+          <td>Closest on the reconciliation step, but stops at a prioritized queue rather than continuing to threshold-gated automated remediation</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout">
+    <span class="label">Reading this fairly</span>
+    The comparison reflects the landscape around the November 2024 filing, and this market moves quickly — several vendors have since expanded their automated-remediation and blast-radius-prediction features, so a current head-to-head would need re-checking. The claim is also not that predicting remediation side effects is unknown as an idea; it is that this specific chain — four scan streams reconciled, CVE-verified, ML-analyzed for the consequence of fixing, scored into a matrix, and that matrix&rsquo;s threshold used to release automated remediation — is claimed as one system.
+  </div>
+
+  <p class="navback"><a href="../">← back to index</a></p>
+
+  <footer>
+    <p>Reading notes on U.S. Patent No. 12,265,631 B1, assigned to Onix Networking Corp. Claim text and reference numerals transcribed from the granted patent (cols. 7–14 for the module descriptions and method 400, cols. 15–18 for the claims). Not a legal opinion; verify against the official record at <a href="https://patents.google.com/patent/US12265631" target="_blank" rel="noopener">patents.google.com/patent/US12265631</a> or the USPTO.</p>
+    <span class="stamp">Patent reading notes</span>
+  </footer>
+
+</main>
+</body>
+</html>
