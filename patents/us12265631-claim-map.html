@@ -307,7 +307,7 @@
 
   <div class="callout">
     <span class="label">Why this was filed</span>
-    Scanners were never the bottleneck. An enterprise could already scan its applications, operating systems, container images, and network and drown in findings from four different tools that did not talk to each other. What nobody automated was the judgment after the scan: reconciling those four report streams into one non-duplicated view, and then deciding what would actually happen <em>if you applied the fix</em>, because in production the remediation itself carries risk. Onix built a system that scores the consequence of remediating, not just the severity of the vulnerability, and lets that score gate whether the fix runs automatically. That gate is what this patent claims.
+    Scanners were never the bottleneck. An enterprise could already scan its applications, operating systems, container images, and network and drown in findings from four different tools that did not talk to each other. Nobody automated the judgment after the scan: reconciling those four report streams into one non-duplicated view, and then deciding what would actually happen <em>if you applied the fix</em>, because in production the remediation itself carries risk. Onix built a system that scores what the remediation itself would do, then lets that score gate whether the fix runs automatically. That gate is what this patent claims.
   </div>
 
   <h2 class="section"><span class="num">I.</span>Three Modules and a Threshold</h2>
@@ -513,7 +513,7 @@
 
   <h2 class="section"><span class="num">IV.</span>How This Differs From Existing Tools</h2>
   <p class="prose">
-    Vulnerability management is a mature market, and risk-based prioritization is its standard feature. Tenable&rsquo;s VPR, Qualys TruRisk, Rapid7 Active Risk, and Wiz&rsquo;s attack-path analysis all rank findings by exploitability, asset criticality, and threat intelligence rather than raw CVSS. All of that scores the same object: how dangerous it is to <em>have</em> the vulnerability. The claimed system scores a different object. Its machine learning model conducts an impact analysis to &ldquo;determine the consequence of fixing&rdquo; the vulnerability, meaning the side effects and unintended consequences of the remediation itself, and the resulting matrix is what gates automatic action.
+    Vulnerability management is a mature market, and risk-based prioritization is its standard feature. Tenable&rsquo;s VPR, Qualys TruRisk, Rapid7 Active Risk, and Wiz&rsquo;s attack-path analysis all rank findings by exploitability, asset criticality, and threat intelligence rather than raw CVSS. Every one of those scores how dangerous it is to <em>have</em> the vulnerability. The claimed system asks a different question. Its machine learning model conducts an impact analysis to &ldquo;determine the consequence of fixing&rdquo; the vulnerability, meaning the side effects the fix itself would introduce, and the resulting matrix is what gates automatic action.
   </p>
 
   <div class="table-wrap">
@@ -554,7 +554,7 @@
 
   <div class="callout">
     <span class="label">Reading this fairly</span>
-    The comparison reflects the landscape around the November 2024 filing, and this market moves quickly, and several vendors have since expanded their automated-remediation and blast-radius-prediction features, so a current head-to-head would need re-checking. The claim is also not that predicting remediation side effects is unknown as an idea; it is that this specific chain, four scan streams reconciled, CVE-verified, ML-analyzed for the consequence of fixing, scored into a matrix, and that matrix&rsquo;s threshold used to release automated remediation, is claimed as one system.
+    The comparison reflects the landscape around the November 2024 filing, and this market moves quickly, and several vendors have since expanded their automated-remediation and blast-radius-prediction features, so a current head-to-head would need re-checking. Predicting remediation side effects is also not a new idea on its own. What the patent claims is the specific chain: four scan streams reconciled, CVE-verified, ML-analyzed for the consequence of fixing, scored into a matrix, and that matrix&rsquo;s threshold used to release the automated remediation, all as one system.
   </div>
 
   <p class="navback"><a href="../">← back to index</a></p>
