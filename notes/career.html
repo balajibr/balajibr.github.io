@@ -464,14 +464,25 @@
     <li>Apache Airflow-style DAGs</li>
     <li>vision language models</li>
     <li>fine-tuned SLMs</li>
-    <li>RAG / knowledge catalogs</li>
+    <li>RAG / knowledge graphs</li>
+    <li>context engines</li>
     <li>HITL evals</li>
     <li>Google Cloud Platform</li>
   </ul>
 
   <p>AI/ML architect. Rapid prototypes carried through into production agentic workflows. Vision language models for legacy system interaction, which mostly means getting a model to operate software that has no API. Fine-tuned small language models for domain work. Agentic orchestration with ADK, LangGraph, and custom frameworks built on Airflow-inspired DAGs.</p>
 
-  <p>The retrieval thread shows up here as knowledge catalogs: getting enterprise data into a shape an autonomous system can reason over. Same problem as the parts catalog, three technology generations later. The thing being indexed changed. So did the consumer, from a mechanic to a model. The question stayed put: how do you make a large, messy, structured corpus addressable by something that has to act on it?</p>
+  <p>The retrieval thread shows up here as knowledge catalogs, held as a graph: getting enterprise data into a shape an autonomous system can reason over. Same problem as the parts catalog, three technology generations later. The thing being indexed changed. So did the consumer, from a mechanic to a model. The question stayed put: how do you make a large, messy, structured corpus addressable by something that has to act on it?</p>
+
+  <div class="detour tech">
+    <span class="tag">Tech detour</span>
+    <h3>The dreaming state</h3>
+    <p>The knowledge graph is the easy half. It holds what somebody already curated, the gold and silver tiers, the material an organisation has decided is worth keeping and has already made sense of.</p>
+    <p>A context engine has to take the other half too. The data lake. Operational exhaust, real world records, things nobody has ever queried, and a large volume of unstructured and dirty material that sits in every organisation and gets used for nothing at all.</p>
+    <p>The piece I like most is the part we call the dreaming state. A brain moves some of what it picked up during the day into long term memory, and tidies things up while it is in there. This does the same job. It goes over what has accumulated, recognises the nodes it already knows, works out how the new material connects to them, and writes the result into the graph.</p>
+    <p>What makes it interesting is the case where nothing fits. If the material calls for a kind of node that does not exist yet, it creates one.</p>
+    <p class="kicker">At Wipro a person wrote the schema before anything could be filed. This one writes its own.</p>
+  </div>
 
   <p>The three patents come out of this period and the cloud migration work around it. They share one observation. The individual capabilities all existed already, but nobody had automated the judgment in between them. Migration assessment tools could inventory an estate but could not decide the wave plan. Scanners could find vulnerabilities but could not predict what would break if you fixed them. Both times the missing piece was the reasoning step in the middle, and both times it turned out to be patentable because nobody had built it as one chain.</p>
 
@@ -488,6 +499,8 @@
   <p>Production discipline from industrial software, where a bug had the physical world downstream of it. Abstraction design from platform work, where the abstraction is the product. Translation from consulting.</p>
 
   <p>And underneath all of it, one long argument with the same problem. How do you make a complicated body of information addressable by something that needs to act on it, whether that something is a mechanic holding a wrench or an agent holding a tool call.</p>
+
+  <p>What moved across the twenty-seven years is who does the structuring. At Wipro people did it by hand and the parser refused anything that broke the rules. At Google the schema stayed rigid while a model learned to recover structure from documents that paid it no attention. Now a system reads material nobody curated and decides for itself what the categories ought to be. The problem held still. What solves it kept moving.</p>
 
   <footer>
     <span>Last updated August 2026</span>
