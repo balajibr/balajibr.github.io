@@ -4,6 +4,10 @@ Technologist with 27 years in distributed systems and cloud architecture. Curren
 
 ---
 
+## Resume
+
+* [Full resume](resume.html): experience, core expertise, patents, certifications.
+
 ## Notes
 
 [**Career notes**](notes/career.html): twenty-seven years, from SGML aircraft manuals at Wipro to agentic AI at Onix. Written with the tangents left in, of two kinds.
@@ -21,10 +25,6 @@ Reading notes on the three patents I am a named inventor on. Each one is an anno
 * [US 12,265,631 B1](patents/us12265631-claim-map.html), *System and method to analyze security across digital environments.* Granted April 1, 2025. [[official record](https://patents.google.com/patent/US12265631)]
 
 The first two are companion filings, one week apart. One claims deciding what a cloud migration should be, the other claims carrying it out.
-
-## Resume
-
-* [Full resume](resume.html): experience, core expertise, patents, certifications.
 
 ---
 
