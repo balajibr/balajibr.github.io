@@ -400,7 +400,13 @@
 
   <p>Two things were new. The first was that the work faced outward. I sat between the product team and the customer, translating what customers actually needed into something the product team could act on, and translating what the product could actually do into something a customer could plan around. I underestimated how different that is from engineering until I had to do it.</p>
 
-  <p>The second was the return to documents, and that one I went looking for. The Document AI work was a 20% project, the slice of the week Google let you spend on something you picked yourself. Twenty years after the aircraft manuals I was back to pulling structure out of technical documents so a machine could act on it. The difference is that the structure now had to be inferred by a model instead of enforced by a DTD. In 1999 the discipline was upstream: authors wrote to a schema and the system could rely on it. With lending documents there is no schema and no compliance, just whatever the originator happened to send. Most of the gap between a model that scores well on a benchmark and a processor that survives real documents comes down to that.</p>
+  <p>The second was the return to documents, and that one I went looking for. The Document AI work was a 20% project, the slice of the week Google let you spend on something you picked yourself. Twenty years after the aircraft manuals I was back to pulling structure out of documents so a machine could act on it.</p>
+
+  <p>There was still a schema. Lending paperwork is form-driven and well specified. What had moved was the point where the structure got enforced. In 1999 it was enforced at authoring time, and you wrote to the DTD or the parser threw you out. In lending, the schema describes where the values are supposed to land, and then a human with a pen decides how close to that they feel like getting.</p>
+
+  <p>So the work was recovery rather than parsing. Which box does this value actually belong to. Is that digit a seven or a one. Someone strikes out a number and writes the corrected loan amount on the same line as the application docket number, and any human reading it knows immediately what happened. A model has to be taught that a strikethrough means retract, that being next to something on the page implies nothing, and that the value it is looking for is now sitting in a field reserved for something else entirely.</p>
+
+  <p>Most of the gap between a model that scores well on a benchmark and a processor that survives real documents lives right there.</p>
 
   <div class="detour">
     <span class="tag">Detour</span>
