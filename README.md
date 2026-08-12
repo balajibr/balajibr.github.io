@@ -14,7 +14,7 @@ Technologist with 27 years in distributed systems and cloud architecture. Curren
 
 *Technical ones*, like maintaining COM written in plain C years before I knew what COM was, or wiring XMLHTTP into a monitoring dashboard back when nobody had thought to call the pattern Ajax yet.
 
-*Personal ones*, like the El Al security interrogation on the first flight of my life, the Microsoft years when a new phone turned up every year and some of them did not officially exist, clearing Google's SWE bar and then working out I did not want that job, dogfooding Meena partly because it came with ad-free YouTube, and the February 2023 layoff that pushed me into the LLM work I do now.
+*Personal ones*, like the El Al security interrogation on the first flight of my life, the Microsoft years when a new phone turned up every year and some of them did not officially exist, clearing Google's SWE bar and then working out I did not want that job, dogfooding Meena partly because it came with ad-free YouTube, and the early 2023 layoff that pushed me into the LLM work I do now.
 
 ## Patents
 
