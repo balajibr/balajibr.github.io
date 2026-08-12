@@ -206,6 +206,21 @@
     font-style: italic;
   }
 
+  /* ---- tech detours: same aside format, cooler palette ---- */
+  .detour.tech {
+    background: #e6eef4;
+    border-color: #b8cfe0;
+    border-left-color: var(--accent);
+  }
+  .detour.tech .tag { color: var(--accent); }
+  .detour.tech .kicker { color: #2a5170; }
+  .detour.tech code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 13px;
+    background: #d6e4ee;
+    padding: 1px 5px;
+  }
+
   footer {
     margin-top: 54px;
     padding-top: 16px;
@@ -245,7 +260,7 @@
 
   <p>Writing this down, I noticed two threads I had not consciously connected before. One is making complicated information findable. The other is automating the judgment that sits between two steps that are already automated. Almost everything below is one or the other.</p>
 
-  <p>The boxed sections are the parts that have nothing to do with either.</p>
+  <p>The boxed sections are asides. Blue ones are technical, the tangents and the things I only understood the value of later. Warm ones are personal and have nothing to do with the work at all.</p>
 
   <!-- TODO: Balaji, the "Worked with" strips are built only from what your resume and notes
        already state, so they are missing the actual languages and day-to-day tools. What did
@@ -279,6 +294,21 @@
 
   <p>I did not think of it that way at the time. It was a retrieval problem over structured technical data. I would end up back at that same problem twice more.</p>
 
+  <div class="detour tech">
+    <span class="tag">Tech detour</span>
+    <h3>The gems I did not know I was holding</h3>
+    <p>DynaWeb had a lineage. Its predecessor, DynaText, came out of academic research, went to Inso, and then to Enigma, which is where I picked it up.</p>
+    <p>Somewhere in that inheritance I found out that Charles Goldfarb, who invented SGML, had a hand in one of the parsers we were working on. Tim Bray's name turned up in there too.</p>
+    <p>The code was COM, written in C rather than C++. Doing COM that way means wiring vtables by hand and staying very careful about reference counts. Parts had been moved to C++ later for structure, so a single afternoon could put you in two eras of the same codebase.</p>
+    <p>Years later at Microsoft, when I learned COM properly, I kept recognising things. Same shapes, same discipline, picked up early without knowing what it was.</p>
+    <p class="kicker">At the time I had no idea any of it was a gem.</p>
+  </div>
+
+  <!-- TODO: Balaji, worth a sanity check before this is public. The Goldfarb and SGML link is solid,
+       and the DynaText to Inso to Enigma chain matches the public record. The Tim Bray connection to
+       that specific parser is your recollection and I could not confirm it, so either confirm it or
+       I will soften the line to something you are certain of. -->
+
   <div class="detour">
     <span class="tag">Detour</span>
     <h3>My first flight was an interrogation</h3>
@@ -307,6 +337,15 @@
   <p>That last part is what stuck. A bug in that world could take a process unit offline and cost a plant hours of production. You learn to think about failure modes before features, and "it works on my machine" stops meaning anything.</p>
 
   <p>Everything I later took for granted about production discipline, I learned here first, in a place where the physical world was downstream of the code.</p>
+
+  <div class="detour tech">
+    <span class="tag">Tech detour</span>
+    <h3>Ajax, before anyone called it that</h3>
+    <p>Microsoft's Outlook Web Access team built <code>XMLHTTP</code> so a browser could fetch from the server without repainting the page. It shipped inside Internet Explorer 5 in 1999. That was the first time a web page could behave the way a desktop application did.</p>
+    <p>I borrowed the technique for one of our monitoring dashboards. The praise I got for how fluid it felt ran well past the amount of code it actually took.</p>
+    <p>Then Gmail shipped and went all in on the same idea, someone finally gave the pattern a name in 2005, jQuery sanded off the rough edges, and it hardened into a standard everyone now assumes was always there.</p>
+    <p class="kicker">For a few years in the middle it simply looked like magic.</p>
+  </div>
 
   <!-- TODO: Balaji, was there a specific project or a specific ceiling that ended this chapter? Any story from the refinery work that still comes to mind? Also: any good detour material from these years? -->
 
