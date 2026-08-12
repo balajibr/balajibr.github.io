@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Career notes</title>
+<meta name="description" content="Twenty-seven years of work notes, from SGML aircraft manuals at Wipro to agentic AI at Onix, with the detours that stuck." />
+<style>
+  :root {
+    --paper: #eef0e8;
+    --card: #fbfcf7;
+    --ink: #1b2233;
+    --ink-soft: #4a5266;
+    --ink-faint: #6b7285;
+    --rule: #c9c6b4;
+    --rule-soft: #dcd9ca;
+    --accent: #2c5b82;
+    --accent-wash: #dde7ee;
+    --brass: #8f6a2e;
+    --brass-wash: #f2e9d8;
+    --brass-edge: #d8c396;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--paper);
+    color: var(--ink);
+  }
+
+  body {
+    font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif;
+    font-size: 17px;
+    line-height: 1.62;
+  }
+
+  .mono {
+    font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+    font-variant-numeric: tabular-nums;
+  }
+
+  a { color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent-wash); }
+  a:hover { border-bottom-color: var(--accent); }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  .sheet {
+    max-width: 760px;
+    margin: 0 auto;
+    background: var(--card);
+    border-left: 1px solid var(--rule);
+    border-right: 1px solid var(--rule);
+    min-height: 100vh;
+    padding: 0 60px 90px;
+  }
+  @media (max-width: 680px) {
+    .sheet { padding: 0 22px 60px; border: none; }
+    body { font-size: 16px; }
+  }
+
+  .topbar { font-size: 12px; padding: 14px 0 0; }
+  .topbar a { color: var(--ink-faint); border-bottom-color: transparent; }
+  .topbar a:hover { color: var(--accent); border-bottom-color: var(--accent-wash); }
+
+  /* ---- title ---- */
+  header.masthead {
+    padding: 34px 0 24px;
+    border-bottom: 3px double var(--ink);
+    margin-bottom: 12px;
+  }
+  h1 {
+    font-size: 38px;
+    margin: 0 0 8px;
+    font-weight: 700;
+    line-height: 1.08;
+    letter-spacing: 0.01em;
+  }
+  .standfirst {
+    font-size: 16px;
+    color: var(--ink-soft);
+    font-style: italic;
+    margin: 0;
+    max-width: 56ch;
+  }
+  .draftflag {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 11px;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--brass);
+    margin: 22px 0 30px;
+    padding: 7px 12px;
+    border: 1px dashed var(--brass-edge);
+    display: inline-block;
+  }
+
+  /* ---- chapter nav ---- */
+  nav.chapters {
+    font-size: 13px;
+    margin: 0 0 38px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--rule-soft);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 16px;
+  }
+  nav.chapters a { border-bottom: none; color: var(--ink-soft); }
+  nav.chapters a:hover { color: var(--accent); }
+  nav.chapters .yr { color: var(--ink-faint); font-size: 11.5px; }
+
+  /* ---- chapters ---- */
+  h2 {
+    font-size: 23px;
+    margin: 46px 0 4px;
+    font-weight: 700;
+    line-height: 1.2;
+    scroll-margin-top: 20px;
+  }
+  h2 .yr {
+    display: block;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    color: var(--brass);
+    font-weight: 400;
+    margin-bottom: 6px;
+  }
+  h2 + p { margin-top: 14px; }
+
+  p { margin: 0 0 17px; max-width: 62ch; }
+
+  /* ---- per-era stack strip ---- */
+  .stack {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+    list-style: none;
+    padding: 0;
+    margin: 14px 0 22px;
+  }
+  .stack li {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 11.5px;
+    background: var(--accent-wash);
+    border: 1px solid #c5d5e2;
+    color: #24506f;
+    padding: 3px 9px;
+    white-space: nowrap;
+  }
+  .stack li.lbl {
+    background: none;
+    border: none;
+    color: var(--ink-faint);
+    padding: 0 4px 0 0;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-size: 10px;
+  }
+  .stack li.gap {
+    background: none;
+    border: none;
+    color: var(--rule);
+    padding: 0 2px;
+  }
+
+  hr.close {
+    border: none;
+    border-top: 1px solid var(--rule);
+    margin: 46px 0 26px;
+  }
+
+  /* ---- the detours: personal asides, deliberately a different voice ---- */
+  .detour {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    background: var(--brass-wash);
+    border: 1px solid var(--brass-edge);
+    border-left: 4px solid var(--brass);
+    padding: 20px 24px 22px;
+    margin: 34px 0;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+  .detour .tag {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--brass);
+    font-weight: 700;
+    display: block;
+    margin-bottom: 10px;
+  }
+  .detour h3 {
+    font-size: 18px;
+    margin: 0 0 12px;
+    font-weight: 700;
+    line-height: 1.25;
+  }
+  .detour p { margin: 0 0 13px; max-width: none; }
+  .detour p:last-child { margin-bottom: 0; }
+  .detour .kicker {
+    font-size: 14px;
+    color: #6f5423;
+    font-style: italic;
+  }
+
+  footer {
+    margin-top: 54px;
+    padding-top: 16px;
+    border-top: 1px solid var(--rule);
+    font-size: 12px;
+    color: var(--ink-faint);
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+</style>
+</head>
+<body>
+
+<div class="sheet">
+
+  <div class="topbar"><a href="../">← balajibr.github.io</a></div>
+
+  <header class="masthead">
+    <h1>Career notes</h1>
+    <p class="standfirst">Twenty-seven years of work, 1999 to now, and the detours that stuck.</p>
+  </header>
+
+  <p class="draftflag">Working draft</p>
+
+  <nav class="chapters">
+    <a href="#wipro">Wipro <span class="yr mono">99&ndash;01</span></a>
+    <a href="#honeywell">Honeywell <span class="yr mono">01&ndash;05</span></a>
+    <a href="#microsoft">Microsoft <span class="yr mono">05&ndash;18</span></a>
+    <a href="#google">Google <span class="yr mono">18&ndash;23</span></a>
+    <a href="#onix">Onix <span class="yr mono">23&ndash;</span></a>
+    <a href="#carried">What carried over</a>
+  </nav>
+
+  <p>Twenty-seven years is long enough that the industry I started in and the one I work in today share very little vocabulary.</p>
+
+  <p>Writing this down, I noticed two threads I had not consciously connected before. One is making complicated information findable. The other is automating the judgment that sits between two steps that are already automated. Almost everything below is one or the other.</p>
+
+  <p>The boxed sections are the parts that have nothing to do with either.</p>
+
+  <!-- TODO: Balaji, the "Worked with" strips are built only from what your resume and notes
+       already state, so they are missing the actual languages and day-to-day tools. What did
+       you write DynaWeb customizations in? What was the Honeywell stack (language, database,
+       platform)? Same for the Microsoft years beyond the product names. Send me a list per era
+       and I will fill these in properly. -->
+
+
+  <h2 id="wipro"><span class="yr">Wipro · 1999 to 2001</span>Structured documents</h2>
+  <ul class="stack">
+    <li class="lbl">Worked with</li>
+    <li>DynaWeb (Enigma)</li>
+    <li>SGML</li>
+    <li>XML</li>
+    <li>DTDs</li>
+    <li>dynamic stylesheets</li>
+    <li>SVG</li>
+    <li>IETM</li>
+    <li>ATA aviation data specs</li>
+    <li>full-text search indexing</li>
+    <li>Netscape / IE 4-5</li>
+  </ul>
+
+  <p>I started on DynaWeb, Enigma's distributed content management and e-publishing system. We were tailoring it for Bombardier Aerospace, and the job was getting them off paper. What came out the other side were Interactive Electronic Technical Manuals for the CRJ and Q400 fleets: maintenance manuals, wiring manuals, illustrated parts catalogs.</p>
+
+  <p>Underneath it was structured SGML, held to aviation industry data standards. It served over corporate intranets and extranets, and also shipped on disc, so a mechanic in a hangar with no network could still pull up the manual.</p>
+
+  <p>The engineering problem was formatting on the fly. Raw structured data went in, and stylesheets applied presentation dynamically depending on which browser was asking. In 1999 that meant fighting Netscape and Internet Explorer at the same time. Long compilation times, unforgiving DTDs, and a document model that had no tolerance for sloppiness, because the documentation described aircraft.</p>
+
+  <p>The piece I remember most clearly is the illustrations. We embedded vector graphics, catalogued them, and pushed them into the search index. Someone working on a complex engine assembly could search for a single screw or bolt and zoom straight to it. That was really the point of the whole project. We were building a structure precise enough that any individual component on an aircraft became addressable.</p>
+
+  <p>I did not think of it that way at the time. It was a retrieval problem over structured technical data. I would end up back at that same problem twice more.</p>
+
+  <div class="detour">
+    <span class="tag">Detour</span>
+    <h3>My first flight was an interrogation</h3>
+    <p>I had never been on a plane before Wipro sent me to Israel. First flight of my life, Mumbai to Tel Aviv, headed for Enigma's office in Herzliya Pituach.</p>
+    <p>Nobody warned me about El Al.</p>
+    <p>Security started with me. Where was I going, what would I be doing there, who did I work for. Then my family: names, what they did, where they lived, going back a lot further than I expected anyone to care about. Then it moved to the people I was travelling with, and that is the part I still think about. They asked what I knew about my colleagues. Their backgrounds, where they were from, whatever I happened to know.</p>
+    <p>Then they asked my colleagues the same questions about me, and about each other, and checked whether all our answers lined up.</p>
+    <p class="kicker">I have flown a lot since. Nothing has come close.</p>
+  </div>
+
+  <!-- TODO: Balaji, two things on this chapter. (a) Worth checking the specifics before this goes public: the exact data standards, and how much of the stylesheet and DTD detail is your own memory versus reconstructed after the fact. I deliberately kept the resume version vaguer. (b) What made you move to Honeywell? -->
+
+  <h2 id="honeywell"><span class="yr">Honeywell · 2001 to 2005</span>What production actually means</h2>
+  <ul class="stack">
+    <li class="lbl">Worked with</li>
+    <li>Production Planning</li>
+    <li>Production Analyst</li>
+    <li>Operations Management</li>
+    <li>dynamic OLAP cubes</li>
+    <li>refinery planning models</li>
+    <li>remote automation</li>
+  </ul>
+
+  <p>Refinery and oil enterprise software. Production planning, production analysis, operations management. Dynamic cubes for production modeling, workflow automation for refinery planning, and remote automation products for plants that could not simply be restarted.</p>
+
+  <p>That last part is what stuck. A bug in that world could take a process unit offline and cost a plant hours of production. You learn to think about failure modes before features, and "it works on my machine" stops meaning anything.</p>
+
+  <p>Everything I later took for granted about production discipline, I learned here first, in a place where the physical world was downstream of the code.</p>
+
+  <!-- TODO: Balaji, was there a specific project or a specific ceiling that ended this chapter? Any story from the refinery work that still comes to mind? Also: any good detour material from these years? -->
+
+  <h2 id="microsoft"><span class="yr">Microsoft · 2005 to 2018</span>The shift to platform</h2>
+  <ul class="stack">
+    <li class="lbl">Worked with</li>
+    <li>Azure IaaS / PaaS</li>
+    <li>Office 365</li>
+    <li>Azure Stack</li>
+    <li>Windows Azure Pack</li>
+    <li>Azure Resource Manager</li>
+    <li>System Center DCS</li>
+    <li>SCVMM</li>
+    <li>storage resource providers</li>
+    <li>multi-tenant services</li>
+  </ul>
+
+  <p>Thirteen years, and they line up almost exactly with the industry's move to cloud.</p>
+
+  <p>Software engineering lead for Managed Services for Cloud, running multi-tenant solutions across Azure IaaS, PaaS, and O365. Hybrid storage resource providers for Azure Stack, back when it was still called Windows Azure Pack. Cloud hydration with System Center DCS, doing data-driven multi-tier workload deployment through Azure Resource Manager and SCVMM.</p>
+
+  <p>The change here was altitude. At Honeywell I built applications. At Microsoft I built the thing other people built applications on. Those are different jobs. In platform work your users are engineers, your failure modes are other teams' outages, and your best decisions are the ones nobody ever notices. You also spend months arguing about abstractions, because the abstraction is the product.</p>
+
+  <!-- TODO: Balaji, thirteen years is a long time. What were the two or three distinct eras inside it? Was Azure Stack the peak, or something else? What kept you there, and then what ended it? Thirteen years should have at least one good detour in it. -->
+
+  <h2 id="google"><span class="yr">Google · 2018 to 2023</span>Consulting, and documents again</h2>
+  <ul class="stack">
+    <li class="lbl">Worked with</li>
+    <li>Document AI</li>
+    <li>Google Cloud Platform</li>
+    <li>document intelligence pipelines</li>
+    <li>RFP automation</li>
+    <li>pipeline analytics</li>
+    <li>partner enablement</li>
+  </ul>
+
+  <p>Five years as a solutions architect. Customized Document AI processors for lending document types, and acting as a feedback loop back into product engineering on the document intelligence roadmap. Automated RFP response systems and pipeline analytics. Technical strategy and enablement for GSI partners across Data Analytics and AI/ML.</p>
+
+  <p>Two things were new. The first was that the work faced outward. I sat between the product team and the customer, translating what customers actually needed into something the product team could act on, and translating what the product could actually do into something a customer could plan around. I underestimated how different that is from engineering until I had to do it.</p>
+
+  <p>The second was the return to documents. Twenty years after the aircraft manuals I was back to pulling structure out of technical documents so a machine could act on it. The difference is that the structure now had to be inferred by a model instead of enforced by a DTD. In 1999 the discipline was upstream: authors wrote to a schema and the system could rely on it. With lending documents there is no schema and no compliance, just whatever the originator happened to send. Most of the gap between a model that scores well on a benchmark and a processor that survives real documents comes down to that.</p>
+
+  <!-- TODO: Balaji, hardest Document AI customer problem? And what pulled you toward Onix? -->
+
+  <h2 id="onix"><span class="yr">Onix · 2023 to now</span>Building again, and the patents</h2>
+  <ul class="stack">
+    <li class="lbl">Worked with</li>
+    <li>ADK</li>
+    <li>LangGraph</li>
+    <li>Apache Airflow-style DAGs</li>
+    <li>vision language models</li>
+    <li>fine-tuned SLMs</li>
+    <li>RAG / knowledge catalogs</li>
+    <li>HITL evals</li>
+    <li>Google Cloud Platform</li>
+  </ul>
+
+  <p>AI/ML architect. Rapid prototypes carried through into production agentic workflows. Vision language models for legacy system interaction, which mostly means getting a model to operate software that has no API. Fine-tuned small language models for domain work. Agentic orchestration with ADK, LangGraph, and custom frameworks built on Airflow-inspired DAGs.</p>
+
+  <p>The retrieval thread shows up here as knowledge catalogs: getting enterprise data into a shape an autonomous system can reason over. Same problem as the parts catalog, three technology generations later. The thing being indexed changed. So did the consumer, from a mechanic to a model. The question stayed put: how do you make a large, messy, structured corpus addressable by something that has to act on it?</p>
+
+  <p>The three patents come out of this period and the cloud migration work around it. They share one observation. The individual capabilities all existed already, but nobody had automated the judgment in between them. Migration assessment tools could inventory an estate but could not decide the wave plan. Scanners could find vulnerabilities but could not predict what would break if you fixed them. Both times the missing piece was the reasoning step in the middle, and both times it turned out to be patentable because nobody had built it as one chain.</p>
+
+  <p>That habit, looking for the human judgment sitting between two automated steps, is the most portable thing I have picked up. It is also more or less what agentic systems are for.</p>
+
+  <p>The claim maps for all three are <a href="../#patents">on this site</a> if you want the detail.</p>
+
+  <!-- TODO: Balaji, the patent origin stories. Who had the idea first? What did the first working version look like? Also worth saying: what does the agentic work look like day to day, and what do you think is overhyped about it? -->
+
+  <hr class="close" />
+
+  <h2 id="carried">What carried over</h2>
+
+  <p>None of the Wipro stack survives in what I do now. Neither does the Honeywell one. What survives is narrower and more useful than any technology.</p>
+
+  <p>Production discipline from industrial software, where a bug had the physical world downstream of it. Abstraction design from platform work, where the abstraction is the product. Translation from consulting.</p>
+
+  <p>And underneath all of it, one long argument with the same problem. How do you make a complicated body of information addressable by something that needs to act on it, whether that something is a mechanic holding a wrench or an agent holding a tool call.</p>
+
+  <!-- TODO: Balaji, does this framing ring true or is it too neat? The retrieval thread connecting Wipro to Document AI to knowledge catalogs is my read, not something you told me. Say so if it is a stretch and I will drop it. Happy to make this messier if the real path was less linear. -->
+
+  <footer>
+    <span>Last updated August 2026</span>
+    <span><a href="../resume.html">Resume</a> · <a href="../">Index</a></span>
+  </footer>
+
+</div>
+</body>
+</html>

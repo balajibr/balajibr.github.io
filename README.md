@@ -20,7 +20,7 @@ The first two are companion filings, one week apart. One claims deciding what a 
 
 ## Notes
 
-* [Career notes](notes/career.md): how the work changed across Wipro, Honeywell, Microsoft, Google, and Onix.
+* [Career notes](notes/career.html): how the work changed across Wipro, Honeywell, Microsoft, Google, and Onix.
 
 ---
 
