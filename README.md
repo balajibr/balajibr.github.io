@@ -4,9 +4,13 @@ Technologist with 27 years in distributed systems and cloud architecture. Curren
 
 ---
 
-## Resume
+## Notes
 
-* [Full resume](resume.html): experience, core expertise, patents, certifications.
+[**Career notes**](notes/career.html): twenty-seven years, from SGML aircraft manuals at Wipro to agentic AI at Onix. Written with the tangents left in, of two kinds.
+
+*Technical ones*, like maintaining COM written in plain C years before I knew what COM was, or wiring XMLHTTP into a monitoring dashboard back when nobody had thought to call the pattern Ajax yet.
+
+*Personal ones*, like the El Al security interrogation on the first flight of my life, the Microsoft years when a new phone turned up every year and some of them did not officially exist, clearing Google's SWE bar and then working out I did not want that job, dogfooding Meena partly because it came with ad-free YouTube, and the February 2023 layoff that pushed me into the LLM work I do now.
 
 ## Patents
 
@@ -18,9 +22,9 @@ Reading notes on the three patents I am a named inventor on. Each one is an anno
 
 The first two are companion filings, one week apart. One claims deciding what a cloud migration should be, the other claims carrying it out.
 
-## Notes
+## Resume
 
-* [Career notes](notes/career.html): how the work changed across Wipro, Honeywell, Microsoft, Google, and Onix.
+* [Full resume](resume.html): experience, core expertise, patents, certifications.
 
 ---
 
